@@ -86,7 +86,7 @@ def test_pyproject_toml(cookies, context):
         poetry = tomlkit.parse(pyproject.read())['tool']['poetry']
 
     assert poetry['name'] == context['project_name']
-    assert poetry['description'] == context['project_verbose_name']
+    assert poetry['description'] == context['project_description']
 
 
 @pytest.mark.parametrize(('prompt', 'entered_value'), [
