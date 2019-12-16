@@ -8,6 +8,6 @@ def context():
     """Creates default prompt values."""
     return {
         'project_name': 'test-project',
-        'project_description': "Custom description",
+        'project_description': 'Custom description',
         'license': 'MIT',
     }

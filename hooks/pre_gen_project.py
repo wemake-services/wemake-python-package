@@ -7,7 +7,6 @@ MODULE_REGEX = r'^[a-z][a-z0-9\-]+[a-z0-9]$'
 MODULE_NAME = '{{ cookiecutter.project_name }}'
 
 
-
 def validate_project_name():
     """
     This validator is used to ensure that `project_name` is valid.
