@@ -5,7 +5,7 @@
 [![Dependencies Status](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/wemake-services/wemake-python-package/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 
-Bleeding edge `cookiecutter` template to create new python packages.
+Bleeding edge [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) template to create new python packages.
 
 ---
 
@@ -45,4 +45,4 @@ cookiecutter gh:wemake-services/wemake-python-template
 
 ## License
 
-MIT. See [LICENSE.md](https://github.com/wemake-services/wemake-python-package/blob/master/LICENSE.md) for more details.
+MIT. See [LICENSE](https://github.com/wemake-services/wemake-python-package/blob/master/LICENSE) for more details.
