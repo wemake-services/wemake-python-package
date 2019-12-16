@@ -21,9 +21,9 @@ pip install {{ cookiecutter.project_name }}
 ```
 
 
-## Examples
+## Example
 
-The usage is identical to `assert` keyword, but a function:
+Showcase how your project can be used:
 
 ```python
 from {{cookiecutter.project_name.lower().replace('-', '_')}}.example import some_function
