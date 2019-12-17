@@ -1183,7 +1183,7 @@ python-versions = "*"
 version = "1.4.0"
 
 [[package]]
-category = "main"
+category = "dev"
 description = "Backported and Experimental Type Hints for Python 3.5+"
 name = "typing-extensions"
 optional = false
@@ -1266,7 +1266,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "contextlib2", "unittest2"]
 
 [metadata]
-content-hash = "510ca46bda32c387f1114995a6ab31afa5ddeb715687b83b440b537f0ff671a0"
+content-hash = "ca3b02fbe8e7ca7df9b4439cc852c38a11c88422eb63e0d5ec9b313ba25b78e1"
 python-versions = "^3.6"
 
 [metadata.files]

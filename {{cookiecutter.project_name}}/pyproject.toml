@@ -31,8 +31,6 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.6"
 
-typing-extensions = "^3.7"
-
 [tool.poetry.dev-dependencies]
 mypy = "^0.750"
 
