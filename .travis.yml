@@ -2,15 +2,8 @@ dist: xenial
 language: python
 
 python:
+  - 3.6
   - 3.7
-
-addons:
-  apt:
-    packages:
-      - docker-ce
-
-services:
-  - docker
 
 env:
   - POETRY_VERSION=1.0.0
