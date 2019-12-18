@@ -9,5 +9,6 @@ def context():
     return {
         'project_name': 'test-project',
         'project_description': 'Custom description',
+        'organization': 'custom-org',
         'license': 'MIT',
     }

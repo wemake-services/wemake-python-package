@@ -87,6 +87,10 @@ def test_pyproject_toml(cookies, context):
 
     assert poetry['name'] == context['project_name']
     assert poetry['description'] == context['project_description']
+    assert poetry['repository'] == 'https://github.com/{0}/{1}'.format(
+        context['organization'],
+        context['project_name'],
+    )
 
 
 @pytest.mark.parametrize(('prompt', 'entered_value'), [

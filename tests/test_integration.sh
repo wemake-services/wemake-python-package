@@ -14,9 +14,11 @@ mkdir -p "$HOME/.test" && cd "$HOME/.test"
 PROJECT_NAME="fake-project"
 
 cookiecutter "$TRAVIS_BUILD_DIR" \
-  --no-input --overwrite-if-exists \
+  --no-input \
+  --overwrite-if-exists \
   project_name="$PROJECT_NAME" \
-  project_domain="myapp.com" \
+  project_description="My custom app" \
+  license="MIT" \
   organization="wemake.services"
 
 cd "$PROJECT_NAME"
