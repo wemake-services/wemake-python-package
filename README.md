@@ -39,7 +39,7 @@ pip install cookiecutter jinja2-git lice
 Then, create a project itself:
 
 ```bash
-cookiecutter gh:wemake-services/wemake-python-template
+cookiecutter gh:wemake-services/wemake-python-package
 ```
 
 
