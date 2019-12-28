@@ -3,7 +3,7 @@
 
 ## Dependencies
 
-We use [`poetry`](https://github.com/python-poetry/poetry) to manage the dependencies.
+We use [poetry](https://github.com/python-poetry/poetry) to manage the dependencies.
 
 To install them you would need to run `install` command:
 
@@ -22,7 +22,7 @@ Run `make test` to run everything we have!
 ## Tests
 
 We use `pytest` and `flake8` for quality control.
-We also use [`wemake_python_styleguide`](https://github.com/wemake-services/wemake-python-styleguide) to enforce the code quality.
+We also use [wemake_python_styleguide](https://github.com/wemake-services/wemake-python-styleguide) to enforce the code quality.
 
 To run all tests:
 
