@@ -43,6 +43,12 @@ cookiecutter gh:wemake-services/wemake-python-package
 ```
 
 
+## Projects using it
+
+Here's [a nice list of real-life open-source usages](https://github.com/search?q=wemake-python-package&type=Code) 
+of this template.
+
+
 ## License
 
 MIT. See [LICENSE](https://github.com/wemake-services/wemake-python-package/blob/master/LICENSE) for more details.
