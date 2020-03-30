@@ -114,12 +114,12 @@ category = "main"
 description = "A command-line utility that creates projects from project templates, e.g. creating a Python package project from a Python package project template."
 name = "cookiecutter"
 optional = false
-python-versions = "*"
-version = "1.6.0"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "1.7.0"
 
 [package.dependencies]
 binaryornot = ">=0.2.0"
-click = ">=5.0"
+click = ">=7.0"
 future = ">=0.15.2"
 jinja2 = ">=2.7"
 jinja2-time = ">=0.1.0"
@@ -1134,7 +1134,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "contextlib2", "unittest2"]
 
 [metadata]
-content-hash = "9b865b915d35aaa3f0f6bf6777d86ce5b51d00d69a54ff40b0dd3c94313acafd"
+content-hash = "87ac78ffe09f29e2266cd65107f283bebd3d2a31717e9d3b15dc7bbf5eec27fa"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -1182,8 +1182,8 @@ colorama = [
     {file = "colorama-0.4.3.tar.gz", hash = "sha256:e96da0d330793e2cb9485e9ddfd918d456036c7149416295932478192f4436a1"},
 ]
 cookiecutter = [
-    {file = "cookiecutter-1.6.0-py2.py3-none-any.whl", hash = "sha256:ed8f54a8fc79b6864020d773ce11539b5f08e4617f353de1f22d23226f6a0d36"},
-    {file = "cookiecutter-1.6.0.tar.gz", hash = "sha256:1316a52e1c1f08db0c9efbf7d876dbc01463a74b155a0d83e722be88beda9a3e"},
+    {file = "cookiecutter-1.7.0-py2.py3-none-any.whl", hash = "sha256:910e6c423da42c45c2614d6676485d4872c4ed1bd9531cfff59280977f98fbf5"},
+    {file = "cookiecutter-1.7.0.tar.gz", hash = "sha256:479997e1c26c51bbbaf04097ef7d82b1d91cfb03f570cb5fb5ca265c88db04ae"},
 ]
 darglint = [
     {file = "darglint-1.1.0-py3-none-any.whl", hash = "sha256:2fe546c4b5d60f523dae4e9f975542c5b1b42838b22e8be64254684e361b0a5f"},
