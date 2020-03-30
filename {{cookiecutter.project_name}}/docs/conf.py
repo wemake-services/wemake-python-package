@@ -31,7 +31,7 @@ def _get_project_meta():
 
 pkg_meta = _get_project_meta()
 project = pkg_meta['name']
-copyright = '2019, {{ cookiecutter.organization }}'  # noqa: A001
+copyright = '2020, {{ cookiecutter.organization }}'  # noqa: WPS125
 author = '{{ cookiecutter.organization }}'
 
 # The short X.Y version

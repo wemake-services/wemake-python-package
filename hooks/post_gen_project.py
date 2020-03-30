@@ -9,6 +9,7 @@ https://github.com/pydanny/cookiecutter-django
 """
 
 import os
+import textwrap
 
 # Get the root project directory:
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
@@ -30,16 +31,18 @@ def generate_license():
         ),
     )
     if license_result:  # it means that return code is not 0, print exception
-        print(license_result)
+        print(license_result)  # noqa: WPS421
 
 
 def print_futher_instuctions():
     """Shows user what to do next after project creation."""
-    print()
-    print('Your project {0} is created.'.format(PROJECT_NAME))
-    print('Now you can start working on it:')
-    print()
-    print('    cd {0}'.format(PROJECT_NAME))
+    message = """
+    Your project {0} is created.
+    Now you can start working on it:
+
+        cd {0}
+    """
+    print(textwrap.dedent(message.format(PROJECT_NAME)))  # noqa: WPS421
 
 
 generate_license()
