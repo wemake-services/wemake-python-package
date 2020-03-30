@@ -23,7 +23,7 @@ Just like `poetry new` but better.
 - [`mypy`](https://mypy.readthedocs.io) for optional static typing
 - [`pytest`](https://github.com/pytest-dev/pytest) for testing
 - `flake8` and [`wemake-python-styleguide`](https://github.com/wemake-services/wemake-python-styleguide) for linting
-- `travis` as the default CI
+- `travis` or `Github Actions` as the default CI
 - [`sphinx`](http://www.sphinx-doc.org/en/master/) and [`readthedocs.org`](https://readthedocs.org/) for documentation
 - Easy update process, so your template will always be up-to-date
 
