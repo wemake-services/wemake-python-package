@@ -1,4 +1,4 @@
-name: misspell
+{% raw %}name: misspell
 
 on:
   schedule:
@@ -16,4 +16,4 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: 'Fixes by misspell-fixer'
-        title: 'Typos fix by misspell-fixer'
+        title: 'Typos fix by misspell-fixer'{% endraw %}
