@@ -26,7 +26,7 @@ jinja2-git = "^1.0"
 
 # TODO: remove after this issue is fixed:
 # https://github.com/python-poetry/poetry/issues/1740
-importlib-metadata = "<0.24,>=0.23"
+importlib-metadata = ">=0.23,<1.7"
 lice = "^0.6"
 
 
