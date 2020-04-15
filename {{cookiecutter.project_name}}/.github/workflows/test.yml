@@ -29,11 +29,18 @@ jobs:
     - name: Install dependencies
       run: |
         source "$HOME/.poetry/env"
-
         poetry config virtualenvs.in-project true
         poetry install
 
     - name: Run checks
       run: |
         source "$HOME/.poetry/env"
-        make test{% endraw %}
+        make test
+        
+    # Uncomment this lines if you wish to upload coverage to codecov:
+    # https://codecov.io/
+    # - name: Upload coverage to Codecov  
+    #   uses: codecov/codecov-action@v1
+    #   with:
+    #     file: ./coverage.xml
+{% endraw %}
