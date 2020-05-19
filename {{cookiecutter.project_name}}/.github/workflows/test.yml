@@ -37,7 +37,7 @@ jobs:
         source "$HOME/.poetry/env"
         make test
         
-    # Uncomment this lines if you wish to upload coverage to codecov:
+    # Uncomment these lines if you wish to upload coverage to codecov:
     # https://codecov.io/
     # - name: Upload coverage to Codecov  
     #   uses: codecov/codecov-action@v1
