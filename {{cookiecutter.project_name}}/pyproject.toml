@@ -35,7 +35,7 @@ python = "^3.6"
 mypy = "^0.770"
 
 wemake-python-styleguide = "^0.14.0"
-flake8-pytest-style = "^1.1"
+flake8-pytest-style = "^1.2"
 nitpick = "^0.22"
 
 safety = "^1.9"
