@@ -32,20 +32,20 @@ classifiers = [
 python = "^3.6"
 
 [tool.poetry.dev-dependencies]
-mypy = "^0.770"
+mypy = "^0.780"
 
-wemake-python-styleguide = "^0.14.0"
-flake8-pytest-style = "^1.1"
+wemake-python-styleguide = "^0.14"
+flake8-pytest-style = "^1.2"
 nitpick = "^0.22"
 
 safety = "^1.9"
 
 pytest = "^5.4"
-pytest-cov = "^2.9"
+pytest-cov = "^2.10"
 pytest-randomly = "^3.4"
 
 sphinx = "^2.2"
-sphinx-autodoc-typehints = "<1.11"
+sphinx-autodoc-typehints = "^1.10"
 doc8 = "^0.8"
 m2r = "^0.2"
 tomlkit = "^0.6"
