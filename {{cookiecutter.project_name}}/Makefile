@@ -19,4 +19,4 @@ package:
 	safety check --full-report -i 38330
 
 .PHONY: test
-test: lint unit package
+test: lint package unit
