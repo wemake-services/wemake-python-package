@@ -39,4 +39,4 @@ pytest-randomly = "^3.4"
 pytest-cookies = "^0.5"
 
 safety = "^1.9"
-tomlkit = "^0.6"
+tomlkit = "^0.7"
