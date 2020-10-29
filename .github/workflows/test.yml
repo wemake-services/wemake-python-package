@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.7]
+        python-version: [3.6, 3.7, 3.8]
 
     steps:
     - uses: actions/checkout@v2
@@ -42,6 +42,4 @@ jobs:
         poetry run sh tests/test_integration.sh
         poetry run poetry check
         poetry run pip check
-        # Ignoring sphinx@2 security issue for now, see:
-        # https://github.com/miyakogi/m2r/issues/51
-        poetry run safety check --full-report -i 38330
+        poetry run safety check --full-report

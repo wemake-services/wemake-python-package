@@ -30,12 +30,12 @@ def _get_project_meta():
 
 
 pkg_meta = _get_project_meta()
-project = pkg_meta['name']
+project = str(pkg_meta['name'])
 copyright = '2020, {{ cookiecutter.organization }}'  # noqa: WPS125
 author = '{{ cookiecutter.organization }}'
 
 # The short X.Y version
-version = pkg_meta['version']
+version = str(pkg_meta['version'])
 # The full version, including alpha/beta/rc tags
 release = version
 
@@ -60,7 +60,7 @@ extensions = [
     'sphinx.ext.napoleon',
 
     # Used to include .md files:
-    'm2r',
+    'm2r2',
 
     # Used to insert typehints into the final docs:
     'sphinx_autodoc_typehints',

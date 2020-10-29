@@ -9,6 +9,7 @@ https://github.com/pydanny/cookiecutter-django
 """
 
 import os
+import sys
 import textwrap
 
 # Get the root project directory:
@@ -32,6 +33,7 @@ def generate_license():
     )
     if license_result:  # it means that return code is not 0, print exception
         print(license_result)  # noqa: WPS421
+        sys.exit(1)
 
 
 def print_futher_instuctions():
