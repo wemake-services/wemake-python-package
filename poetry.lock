@@ -385,7 +385,7 @@ gitdb = ">=4.0.1,<5"
 
 [[package]]
 name = "identify"
-version = "1.5.6"
+version = "1.5.7"
 description = "File identification library for Python"
 category = "dev"
 optional = false
@@ -497,16 +497,16 @@ python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
 
 [[package]]
 name = "marshmallow"
-version = "3.8.0"
+version = "3.9.0"
 description = "A lightweight library for converting complex datatypes to and from native Python datatypes."
 category = "dev"
 optional = false
 python-versions = ">=3.5"
 
 [package.extras]
-dev = ["pytest", "pytz", "simplejson", "mypy (==0.782)", "flake8 (==3.8.3)", "flake8-bugbear (==20.1.4)", "pre-commit (>=2.4,<3.0)", "tox"]
-docs = ["sphinx (==3.2.1)", "sphinx-issues (==1.2.0)", "alabaster (==0.7.12)", "sphinx-version-warning (==1.1.2)", "autodocsumm (==0.2.0)"]
-lint = ["mypy (==0.782)", "flake8 (==3.8.3)", "flake8-bugbear (==20.1.4)", "pre-commit (>=2.4,<3.0)"]
+dev = ["pytest", "pytz", "simplejson", "mypy (==0.790)", "flake8 (==3.8.4)", "flake8-bugbear (==20.1.4)", "pre-commit (>=2.4,<3.0)", "tox"]
+docs = ["sphinx (==3.2.1)", "sphinx-issues (==1.2.0)", "alabaster (==0.7.12)", "sphinx-version-warning (==1.1.2)", "autodocsumm (==0.2.1)"]
+lint = ["mypy (==0.790)", "flake8 (==3.8.4)", "flake8-bugbear (==20.1.4)", "pre-commit (>=2.4,<3.0)"]
 tests = ["pytest", "pytz", "simplejson"]
 
 [[package]]
@@ -530,7 +530,7 @@ python-versions = "*"
 
 [[package]]
 name = "more-itertools"
-version = "8.5.0"
+version = "8.6.0"
 description = "More routines for operating on iterables, beyond itertools"
 category = "dev"
 optional = false
@@ -538,7 +538,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "nitpick"
-version = "0.23.0"
+version = "0.23.1"
 description = "Flake8 plugin to enforce the same lint configuration (flake8, isort, mypy, pylint) across multiple Python projects"
 category = "dev"
 optional = false
@@ -559,7 +559,7 @@ python-slugify = "*"
 requests = "*"
 "ruamel.yaml" = "*"
 sortedcontainers = "*"
-toml = "<0.10.1"
+toml = "*"
 
 [package.extras]
 lint = ["pylint"]
@@ -884,11 +884,11 @@ python-versions = "*"
 
 [[package]]
 name = "toml"
-version = "0.10.0"
+version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
 category = "dev"
 optional = false
-python-versions = "*"
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "tomlkit"
@@ -1106,8 +1106,8 @@ gitpython = [
     {file = "GitPython-3.1.11.tar.gz", hash = "sha256:befa4d101f91bad1b632df4308ec64555db684c360bd7d2130b4807d49ce86b8"},
 ]
 identify = [
-    {file = "identify-1.5.6-py2.py3-none-any.whl", hash = "sha256:3139bf72d81dfd785b0a464e2776bd59bdc725b4cc10e6cf46b56a0db931c82e"},
-    {file = "identify-1.5.6.tar.gz", hash = "sha256:969d844b7a85d32a5f9ac4e163df6e846d73c87c8b75847494ee8f4bd2186421"},
+    {file = "identify-1.5.7-py2.py3-none-any.whl", hash = "sha256:e3c822614168c9ac248f4258ffe43092debceb45e299a07b8f2fb168ba875605"},
+    {file = "identify-1.5.7.tar.gz", hash = "sha256:b505f7658afbddc11556de5ff9a5a52eed81b9a380f8ff77b7dd9781cfee6884"},
 ]
 idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"},
@@ -1176,8 +1176,8 @@ markupsafe = [
     {file = "MarkupSafe-1.1.1.tar.gz", hash = "sha256:29872e92839765e546828bb7754a68c418d927cd064fd4708fab9fe9c8bb116b"},
 ]
 marshmallow = [
-    {file = "marshmallow-3.8.0-py2.py3-none-any.whl", hash = "sha256:2272273505f1644580fbc66c6b220cc78f893eb31f1ecde2af98ad28011e9811"},
-    {file = "marshmallow-3.8.0.tar.gz", hash = "sha256:47911dd7c641a27160f0df5fd0fe94667160ffe97f70a42c3cc18388d86098cc"},
+    {file = "marshmallow-3.9.0-py2.py3-none-any.whl", hash = "sha256:4bc31ab18133083b12893c61f2fc38b93c390d3fd6ae2ac61980b7dc936a1afa"},
+    {file = "marshmallow-3.9.0.tar.gz", hash = "sha256:97ad6acaf727be986330969cff16040fce051510759ca709de9cd48093c55d04"},
 ]
 marshmallow-polyfield = [
     {file = "marshmallow-polyfield-5.9.tar.gz", hash = "sha256:448f4b1ac5cbd671c0fb8a5452e99da7c0e8be924dd2cda2a21ee59457a4748f"},
@@ -1187,12 +1187,12 @@ mccabe = [
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
 more-itertools = [
-    {file = "more-itertools-8.5.0.tar.gz", hash = "sha256:6f83822ae94818eae2612063a5101a7311e68ae8002005b5e05f03fd74a86a20"},
-    {file = "more_itertools-8.5.0-py3-none-any.whl", hash = "sha256:9b30f12df9393f0d28af9210ff8efe48d10c94f73e5daf886f10c4b0b0b4f03c"},
+    {file = "more-itertools-8.6.0.tar.gz", hash = "sha256:b3a9005928e5bed54076e6e549c792b306fddfe72b2d1d22dd63d42d5d3899cf"},
+    {file = "more_itertools-8.6.0-py3-none-any.whl", hash = "sha256:8e1a2a43b2f2727425f2b5839587ae37093f19153dc26c0927d1048ff6557330"},
 ]
 nitpick = [
-    {file = "nitpick-0.23.0-py3-none-any.whl", hash = "sha256:5b37856993686f2fa928b0acb1b0b591106e9c7e78437fec506ffe0c9efa2b88"},
-    {file = "nitpick-0.23.0.tar.gz", hash = "sha256:15e1760b3b4ca77e48096171ee656875d315f2d8825da71b7abc89f2c8ba4ae0"},
+    {file = "nitpick-0.23.1-py3-none-any.whl", hash = "sha256:8102a6ae6ebd716cf796a614e37d9bb7f47851bb53f1c1edbf07675143ed55b9"},
+    {file = "nitpick-0.23.1.tar.gz", hash = "sha256:f2293781c1357baa8969ada485e1c60503b1097375a73c1f2a3c988552071e6a"},
 ]
 packaging = [
     {file = "packaging-20.4-py2.py3-none-any.whl", hash = "sha256:998416ba6962ae7fbd6596850b80e17859a5753ba17c32284f67bfff33784181"},
@@ -1338,9 +1338,8 @@ text-unidecode = [
     {file = "text_unidecode-1.3-py2.py3-none-any.whl", hash = "sha256:1311f10e8b895935241623731c2ba64f4c455287888b18189350b67134a822e8"},
 ]
 toml = [
-    {file = "toml-0.10.0-py2.7.egg", hash = "sha256:f1db651f9657708513243e61e6cc67d101a39bad662eaa9b5546f789338e07a3"},
-    {file = "toml-0.10.0-py2.py3-none-any.whl", hash = "sha256:235682dd292d5899d361a811df37e04a8828a5b1da3115886b73cf81ebc9100e"},
-    {file = "toml-0.10.0.tar.gz", hash = "sha256:229f81c57791a41d65e399fc06bf0848bab550a9dfd5ed66df18ce5f05e73d5c"},
+    {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
+    {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 tomlkit = [
     {file = "tomlkit-0.7.0-py2.py3-none-any.whl", hash = "sha256:6babbd33b17d5c9691896b0e68159215a9387ebfa938aa3ac42f4a4beeb2b831"},
