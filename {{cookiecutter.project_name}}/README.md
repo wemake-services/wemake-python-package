@@ -1,7 +1,6 @@
 # {{ cookiecutter.project_name }}
 
-[![Build Status](https://travis-ci.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}.svg?branch=master)](https://travis-ci.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }})
-[![Coverage](https://coveralls.io/repos/github/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/badge.svg?branch=master)](https://coveralls.io/github/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}?branch=master)
+[![Build Status](https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/workflows/test/badge.svg?branch=master&event=push)](https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/actions?query=workflow%3Atest)
 [![Python Version](https://img.shields.io/pypi/pyversions/{{ cookiecutter.project_name }}.svg)](https://pypi.org/project/{{ cookiecutter.project_name }}/)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 
