@@ -6,6 +6,7 @@ set -o nounset
 # This file is used to setup fake project,
 # run tests inside it,
 # and remove this project completely.
+PREVIOUS_DIR="$PWD"
 
 # Creating a test directory:
 mkdir -p "$HOME/.test" && cd "$HOME/.test"
@@ -22,6 +23,10 @@ cookiecutter "$GITHUB_WORKSPACE" \
   organization="wemake.services"
 
 cd "$PROJECT_NAME"
+
+# Clean up old .venv:
+deactivate
+rm -rf "$PREVIOUS_DIR/.venv"
 
 # Testing the project:
 poetry install
