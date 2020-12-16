@@ -6,6 +6,7 @@ set -o nounset
 # This file is used to setup fake project,
 # run tests inside it,
 # and remove this project completely.
+rm -rf .venv
 
 # Creating a test directory:
 mkdir -p "$HOME/.test" && cd "$HOME/.test"
