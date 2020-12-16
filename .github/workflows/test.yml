@@ -1,6 +1,6 @@
 name: test
 
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
@@ -25,7 +25,10 @@ jobs:
         echo "$HOME/.poetry/bin" >> $GITHUB_PATH
 
     - name: Install dependencies
-      run: poetry install
+      run: |
+        python -v venv .venv
+        source .venv/bin/activate
+        POETRY_VIRTUALENVS_CREATE=false poetry install
 
     - name: Run checks
       run: |
