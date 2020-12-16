@@ -25,7 +25,9 @@ cookiecutter "$GITHUB_WORKSPACE" \
 cd "$PROJECT_NAME"
 
 # Clean up old .venv:
-deactivate
+which python
+echo "venv: $VIRTUAL_ENV"
+# deactivate
 rm -rf "$PREVIOUS_DIR/.venv"
 
 # Testing the project:
