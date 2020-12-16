@@ -28,7 +28,7 @@ cd "$PROJECT_NAME"
 which python
 poetry env list
 echo "venv: $VIRTUAL_ENV"
-# deactivate
+poetry env remove python
 rm -rf "$PREVIOUS_DIR/.venv"
 
 # Testing the project:
