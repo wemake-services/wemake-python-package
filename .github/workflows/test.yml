@@ -28,6 +28,7 @@ jobs:
       run: |
         python -m venv .venv
         source .venv/bin/activate
+        pip install -U pip
         POETRY_VIRTUALENVS_CREATE=false poetry install
 
     - name: Run checks
