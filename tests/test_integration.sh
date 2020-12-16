@@ -24,6 +24,7 @@ cookiecutter "$GITHUB_WORKSPACE" \
 cd "$PROJECT_NAME"
 
 # Removing the previous .venv dir:
+deactivate
 rm -rf "$(poetry env info --path)"
 
 # Testing the project:
