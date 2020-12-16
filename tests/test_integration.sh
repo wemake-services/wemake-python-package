@@ -6,7 +6,6 @@ set -o nounset
 # This file is used to setup fake project,
 # run tests inside it,
 # and remove this project completely.
-PREVIOUS_DIR="$PWD"
 
 # Creating a test directory:
 mkdir -p "$HOME/.test" && cd "$HOME/.test"
@@ -24,13 +23,10 @@ cookiecutter "$GITHUB_WORKSPACE" \
 
 cd "$PROJECT_NAME"
 
-# Clean up old .venv:
-which python
-poetry env list
-echo "venv: $VIRTUAL_ENV"
-poetry env remove python
-rm -rf "$PREVIOUS_DIR/.venv"
+# Create new venv:
+python -m venv .venv
+source .venv/bin/activate
 
 # Testing the project:
-poetry install
-poetry run make test
+POETRY_VIRTUALENVS_CREATE=false poetry install
+make test
