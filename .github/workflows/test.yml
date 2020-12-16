@@ -39,7 +39,7 @@ jobs:
 
         poetry run flake8 .
         poetry run pytest
-        poetry run sh tests/test_integration.sh
         poetry run poetry check
         poetry run pip check
         poetry run safety check --full-report
+        poetry run sh tests/test_integration.sh
