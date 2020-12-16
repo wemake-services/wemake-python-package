@@ -24,8 +24,11 @@ cookiecutter "$GITHUB_WORKSPACE" \
 cd "$PROJECT_NAME"
 
 # Removing the previous .venv dir and creating a new one:
+poetry env list
 rm -rf "$(poetry env info --path)"
+poetry env list
 python -m venv .venv
+poetry env list
 
 # Testing the project:
 poetry install
