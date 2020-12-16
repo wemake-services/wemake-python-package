@@ -24,6 +24,8 @@ cookiecutter "$GITHUB_WORKSPACE" \
 cd "$PROJECT_NAME"
 
 # Removing the previous .venv dir and creating a new one:
+echo 'envs:'
+poetry env list
 poetry env remove python
 rm -rf "$(poetry env info --path)"
 python -m venv .venv
