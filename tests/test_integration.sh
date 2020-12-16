@@ -25,7 +25,7 @@ cd "$PROJECT_NAME"
 
 # Create new venv:
 python -m venv .venv
-source .venv/bin/activate
+. .venv/bin/activate
 
 # Testing the project:
 POETRY_VIRTUALENVS_CREATE=false poetry install
