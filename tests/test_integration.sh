@@ -26,6 +26,7 @@ cd "$PROJECT_NAME"
 
 # Clean up old .venv:
 which python
+poetry env list
 echo "venv: $VIRTUAL_ENV"
 # deactivate
 rm -rf "$PREVIOUS_DIR/.venv"
