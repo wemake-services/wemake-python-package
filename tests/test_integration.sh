@@ -23,9 +23,9 @@ cookiecutter "$GITHUB_WORKSPACE" \
 
 cd "$PROJECT_NAME"
 
-# Removing the previous .venv dir:
-deactivate
+# Removing the previous .venv dir and creating a new one:
 rm -rf "$(poetry env info --path)"
+python -m venv .venv
 
 # Testing the project:
 poetry install
