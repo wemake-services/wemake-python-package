@@ -32,7 +32,7 @@ classifiers = [
 python = "^3.6"
 
 [tool.poetry.dev-dependencies]
-mypy = "^0.812"
+mypy = "^0.901"
 
 wemake-python-styleguide = "^0.15"
 flake8-pytest-style = "^1.4"
