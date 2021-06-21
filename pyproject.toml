@@ -31,7 +31,7 @@ lice = "^0.6"
 binaryornot = "^0.4"
 
 wemake-python-styleguide = "^0.15"
-flake8-pytest-style = "^1.4"
+flake8-pytest-style = "^1.5"
 nitpick = "^0.26"
 
 pytest = "^6.2"
