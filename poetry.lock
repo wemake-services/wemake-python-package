@@ -639,8 +639,8 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "nitpick"
-version = "0.26.0"
-description = "Enforce the same configuration across multiple projects"
+version = "0.27.0"
+description = "Enforce the same settings across multiple language-independent projects"
 category = "dev"
 optional = false
 python-versions = ">=3.6,<4.0"
@@ -669,7 +669,7 @@ toml = "*"
 tomlkit = "*"
 
 [package.extras]
-test = ["freezegun", "pytest-cov", "pytest", "responses", "testfixtures"]
+test = ["freezegun", "pytest-cov", "pytest-socket", "pytest-testmon", "pytest-watch", "pytest", "responses", "testfixtures"]
 lint = ["pylint"]
 doc = ["sphinx", "sphinx-rtd-theme", "sphobjinv"]
 
@@ -1095,7 +1095,7 @@ testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.6,<3.9"
-content-hash = "2f8a108a1fc3e304c52ea600fab1c20233245123f34701ac1557de55cde6f858"
+content-hash = "c08f0b1a51125cc91881446c15eb52ed107c30090795a9ca19102fc632273380"
 
 [metadata.files]
 aiocontextvars = [
@@ -1386,8 +1386,8 @@ more-itertools = [
     {file = "more_itertools-8.7.0-py3-none-any.whl", hash = "sha256:5652a9ac72209ed7df8d9c15daf4e1aa0e3d2ccd3c87f8265a0673cd9cbc9ced"},
 ]
 nitpick = [
-    {file = "nitpick-0.26.0-py3-none-any.whl", hash = "sha256:f5cfcd68f83910ce8a4cd998804a4e15dfd5a9a54a3cb4e201f1ec4bee67fe89"},
-    {file = "nitpick-0.26.0.tar.gz", hash = "sha256:b11009c77975990d7776ea6d307ed4272f5122e83b2fc16a6bad557222b6d809"},
+    {file = "nitpick-0.27.0-py3-none-any.whl", hash = "sha256:bc8a92b004099cef4f35db4f986b76bd1425a364afc5cd0fc38fce13365cf81f"},
+    {file = "nitpick-0.27.0.tar.gz", hash = "sha256:4424a2a374c76173fd6cc1b637b9ab79f1f487cb892e7e9db4458de072082f07"},
 ]
 packaging = [
     {file = "packaging-20.9-py2.py3-none-any.whl", hash = "sha256:67714da7f7bc052e064859c05c595155bd1ee9f69f76557e21f051443c20947a"},
