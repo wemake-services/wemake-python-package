@@ -12,7 +12,8 @@ def validate_project_name():
     This validator is used to ensure that `project_name` is valid.
 
     Valid inputs starts with the lowercase letter.
-    Followed by any lowercase letters, numbers or underscores.
+    Followed by any lowercase letters, numbers or hyphens.
+    Ends with a lowercase letter or number.
 
     Valid example: `school_project3`.
     """
@@ -21,8 +22,11 @@ def validate_project_name():
         message = [
             'ERROR: The project slug {0} is not a valid Python module name.',
             'Start with a lowercase letter.',
-            'Followed by any lowercase letters, numbers or underscores.',
+            'Followed by any lowercase letters, numbers or hyphens (-).',
+            'End with a lowercase letter or number.',
         ]
+        if '_' in MODULE_NAME:
+            message.append('Do not use underscores (_) in your project name.')
         raise ValueError(' '.join(message).format(MODULE_NAME))
 
 
