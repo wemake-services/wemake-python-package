@@ -42,10 +42,16 @@ Then, create a project itself:
 cookiecutter gh:wemake-services/wemake-python-package
 ```
 
+In order for the github actions to work smoothly (ie badge), you must, during the setup, use your github username in the `organization` field.
+```bash
+project_name [my-awesome-project]: foo-project
+organization [wemake.services]: <github_username>
+```
+
 
 ## Projects using it
 
-Here's [a nice list of real-life open-source usages](https://github.com/search?q=wemake-python-package&type=Code) 
+Here's [a nice list of real-life open-source usages](https://github.com/search?q=wemake-python-package&type=Code)
 of this template.
 
 
