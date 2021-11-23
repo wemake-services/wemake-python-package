@@ -3,13 +3,12 @@ SHELL:=/usr/bin/env bash
 .PHONY: lint
 lint:
 	poetry run mypy {{ cookiecutter.project_name.lower().replace('-', '_') }} tests/**/*.py
-	poetry run flake8 .
+	poetry run flake8 ./{{ cookiecutter.project_name.lower().replace('-', '_') }}
 	poetry run doc8 -q docs
 
 .PHONY: unit
 unit:
 	poetry run pytest
-	poetry run pytest --cov=./ --cov-report=xml
 
 .PHONY: package
 package:
