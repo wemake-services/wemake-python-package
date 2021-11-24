@@ -1,6 +1,6 @@
 {
   "project_name": "my-awesome-project",
-  "organization": "wemake.services",
+  "organization": "<github-username>",
   "project_description": "This is how python package should look like!",
 
   "license": "MIT",
