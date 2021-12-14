@@ -1,4 +1,10 @@
-.. mdinclude:: ../README.md
+..
+  This is a comment. You can replace it with:
+
+  .. mdinclude:: ../README.md
+
+  to render a readme file.
+
 
 Contents
 --------
