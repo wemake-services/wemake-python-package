@@ -1,4 +1,6 @@
 {
+    "python.linting.mypyPath": "${env:HOME}/anaconda3/bin/mypy",
+    "python.linting.flake8Path": "${env:HOME}/anaconda3/bin/flake8",
     "workbench.colorCustomizations": {
         "activityBar.inactiveForeground": "#e7e7e799",
         "activityBarBadge.background": "#1f6fd0",
