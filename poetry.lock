@@ -798,7 +798,7 @@ diagrams = ["jinja2", "railroad-diagrams"]
 
 [[package]]
 name = "pytest"
-version = "6.2.5"
+version = "7.0.0"
 description = "pytest: simple powerful testing with Python"
 category = "dev"
 optional = false
@@ -813,10 +813,10 @@ iniconfig = "*"
 packaging = "*"
 pluggy = ">=0.12,<2.0"
 py = ">=1.8.2"
-toml = "*"
+tomli = ">=1.0.0"
 
 [package.extras]
-testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
+testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
 [[package]]
 name = "pytest-cookies"
@@ -1015,6 +1015,14 @@ optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "tomli"
+version = "2.0.0"
+description = "A lil' TOML parser"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "tomlkit"
 version = "0.9.0"
 description = "Style preserving TOML library"
@@ -1099,7 +1107,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "e32dbfd695570e353d4769be97cd38e56ef22f1ff8894416978c1c42107fa518"
+content-hash = "7001166f6138266967bdc687644b06b7767cf37916bb5d7c4aafca8fbd1447f0"
 
 [metadata.files]
 arrow = [
@@ -1443,8 +1451,8 @@ pyparsing = [
     {file = "pyparsing-3.0.6.tar.gz", hash = "sha256:d9bdec0013ef1eb5a84ab39a3b3868911598afa494f5faa038647101504e2b81"},
 ]
 pytest = [
-    {file = "pytest-6.2.5-py3-none-any.whl", hash = "sha256:7310f8d27bc79ced999e760ca304d69f6ba6c6649c0b60fb0e04a4a77cacc134"},
-    {file = "pytest-6.2.5.tar.gz", hash = "sha256:131b36680866a76e6781d13f101efb86cf674ebb9762eb70d3082b6f29889e89"},
+    {file = "pytest-7.0.0-py3-none-any.whl", hash = "sha256:42901e6bd4bd4a0e533358a86e848427a49005a3256f657c5c8f8dd35ef137a9"},
+    {file = "pytest-7.0.0.tar.gz", hash = "sha256:dad48ffda394e5ad9aa3b7d7ddf339ed502e5e365b1350e0af65f4a602344b11"},
 ]
 pytest-cookies = [
     {file = "pytest-cookies-0.6.1.tar.gz", hash = "sha256:94c41ad914d420b57bc31d58ab2c0b103322c11d07d13b8d245c85fa9b069714"},
@@ -1570,6 +1578,10 @@ text-unidecode = [
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
+]
+tomli = [
+    {file = "tomli-2.0.0-py3-none-any.whl", hash = "sha256:b5bde28da1fed24b9bd1d4d2b8cba62300bfb4ec9a6187a957e8ddb9434c5224"},
+    {file = "tomli-2.0.0.tar.gz", hash = "sha256:c292c34f58502a1eb2bbb9f5bbc9a5ebc37bee10ffb8c2d6bbdfa8eb13cc14e1"},
 ]
 tomlkit = [
     {file = "tomlkit-0.9.0-py3-none-any.whl", hash = "sha256:c1b0fc73abd4f1e77c29ea4061ca0f2e11cbfb77342e17df3d3fdd496fc3f899"},
