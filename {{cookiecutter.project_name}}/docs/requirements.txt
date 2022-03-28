@@ -4,7 +4,7 @@
 sphinx==4.5.0
 sphinx-autodoc-typehints==1.17.0
 m2r2==0.3.2
-tomlkit==0.10.0
+tomlkit==0.10.1
 
 # Dependencies of our project:
 typing-extensions==4.1.1
