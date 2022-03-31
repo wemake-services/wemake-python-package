@@ -213,5 +213,5 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-# vscode local history ext
-.history/
+# pyenv
+.python-version
