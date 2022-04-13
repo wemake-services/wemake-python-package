@@ -31,11 +31,18 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.7"
 
+# Docs, optional, use `poetry install -E docs` to install them:
+sphinx = { version = "^4.5",  optional = true }
+sphinx-autodoc-typehints = { version = "^1.18", optional = true }
+m2r2 = { version = "^0.3",  optional = true }
+tomlkit = { version = "^0.10", optional = true }
+
 [tool.poetry.dev-dependencies]
 mypy = "^0.942"
 
 wemake-python-styleguide = "^0.16"
 flake8-pytest-style = "^1.6"
+doc8 = "^0.11"
 nitpick = "^0.32"
 
 safety = "^1.10"
@@ -44,8 +51,5 @@ pytest = "^7.1"
 pytest-cov = "^3.0"
 pytest-randomly = "^3.11"
 
-sphinx = "^4.5"
-sphinx-autodoc-typehints = "^1.18"
-doc8 = "^0.11"
-m2r2 = "^0.3"
-tomlkit = "^0.10"
+[tool.poetry.extras]
+docs = ["sphinx", "sphinx-autodoc-typehints", "m2r2", "tomlkit"]
