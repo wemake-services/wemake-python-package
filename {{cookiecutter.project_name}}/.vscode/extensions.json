@@ -14,7 +14,7 @@
         "mgesbert.python-path",
         "himanoa.python-autopep8",
         "almenon.arepl",
-	      "guyskk.language-cython",
+        "guyskk.language-cython",
         "ms-toolsai.jupyter-renderers",
         "bungcip.better-toml",
     ],
