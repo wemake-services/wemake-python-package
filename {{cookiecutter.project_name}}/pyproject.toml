@@ -35,7 +35,7 @@ python = "^3.7"
 sphinx = { version = "^4.5",  optional = true }
 sphinx-autodoc-typehints = { version = "^1.18", optional = true }
 m2r2 = { version = "^0.3",  optional = true }
-tomlkit = { version = "^0.10", optional = true }
+tomlkit = { version = "^0.11", optional = true }
 
 [tool.poetry.dev-dependencies]
 mypy = "^0.950"
