@@ -22,7 +22,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.7"
 
-cookiecutter = "^1.7"
+cookiecutter = "^2.1"
 jinja2-git = "^1.1"
 lice = "^0.6"
 
@@ -32,11 +32,11 @@ binaryornot = "^0.4"
 
 wemake-python-styleguide = "^0.16"
 flake8-pytest-style = "^1.6"
-nitpick = "^0.29"
+nitpick = "^0.32"
 
-pytest = "^6.2"
-pytest-randomly = "^3.10"
+pytest = "^7.1"
+pytest-randomly = "^3.12"
 pytest-cookies = "^0.6"
 
 safety = "^1.10"
-tomlkit = "^0.8"
+tomlkit = "^0.11"
