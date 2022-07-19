@@ -564,14 +564,14 @@ i18n = ["Babel (>=0.8)"]
 
 [[package]]
 name = "jinja2-git"
-version = "1.1.0"
+version = "1.2.0"
 description = "Jinja2 extension to handle git-specific things"
 category = "main"
 optional = false
 python-versions = ">=3.6,<4.0"
 
 [package.dependencies]
-jinja2 = ">=2.10,<3.0"
+jinja2 = ">=2.10,<4.0"
 
 [[package]]
 name = "jinja2-time"
@@ -1182,7 +1182,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "35da726a0a0072a60eebc95b4558487c61f1aa8a5c0c6228fbf9b77a0e81a938"
+content-hash = "d38174ce599385e573b0527f66a707d8dbf622c96a6beb9ecd1560a93caf2278"
 
 [metadata.files]
 appdirs = [
@@ -1380,8 +1380,8 @@ jinja2 = [
     {file = "Jinja2-2.11.3.tar.gz", hash = "sha256:a6d58433de0ae800347cab1fa3043cebbabe8baa9d29e668f1c768cb87a333c6"},
 ]
 jinja2-git = [
-    {file = "jinja2-git-1.1.0.tar.gz", hash = "sha256:366107d03df0c3ff549c9ccf922a92cb763453fc613e5651123aaa38233c61d0"},
-    {file = "jinja2_git-1.1.0-py3-none-any.whl", hash = "sha256:e06cac17a8bc18b277af78417f04886b50dda446a20250f85c1ffbce534daa36"},
+    {file = "jinja2-git-1.2.0.tar.gz", hash = "sha256:df47e7ec0dd3ca937a3f18dac4fd69eaf16675b6f63c5c95969650a02f24e639"},
+    {file = "jinja2_git-1.2.0-py3-none-any.whl", hash = "sha256:2b11b45ae2e8e8e3f622ef444523b3d856b3af150fa443a4ae6adeb47dfd2024"},
 ]
 jinja2-time = [
     {file = "jinja2-time-0.2.0.tar.gz", hash = "sha256:d14eaa4d315e7688daa4969f616f226614350c48730bfa1692d2caebd8c90d40"},
