@@ -38,7 +38,7 @@ m2r2 = { version = "^0.3",  optional = true }
 tomlkit = { version = "^0.11", optional = true }
 
 [tool.poetry.dev-dependencies]
-mypy = "^0.961"
+mypy = "^0.971"
 
 wemake-python-styleguide = "^0.16"
 flake8-pytest-style = "^1.6"
