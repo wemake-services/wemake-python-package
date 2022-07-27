@@ -19,3 +19,6 @@ package:
 .PHONY: test
 test: lint package unit
 
+.DEFAULT:
+	@cd docs && $(MAKE) $@
+
