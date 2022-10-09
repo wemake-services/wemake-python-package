@@ -23,7 +23,7 @@ sys.path.insert(0, os.path.abspath('..'))
 def _get_project_meta():
     with open('../pyproject.toml', mode='rb') as pyproject:
         file_contents = pyproject.read()
-    return tomli.parse(file_contents)['tool']['poetry']
+    return tomli.load(file_contents)['tool']['poetry']
 
 
 pkg_meta = _get_project_meta()
