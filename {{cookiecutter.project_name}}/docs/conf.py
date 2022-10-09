@@ -13,7 +13,7 @@
 import os
 import sys
 
-import tomlkit
+import tomli
 
 sys.path.insert(0, os.path.abspath('..'))
 
@@ -21,10 +21,9 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 
 def _get_project_meta():
-    with open('../pyproject.toml') as pyproject:
+    with open('../pyproject.toml', mode='rb') as pyproject:
         file_contents = pyproject.read()
-
-    return tomlkit.parse(file_contents)['tool']['poetry']
+    return tomli.parse(file_contents)['tool']['poetry']
 
 
 pkg_meta = _get_project_meta()
