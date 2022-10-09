@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 Does some basic tests on the generated project.
 
@@ -11,7 +9,7 @@ import os
 import re
 
 import pytest
-import tomlkit
+import tomli
 from binaryornot.check import is_binary
 from cookiecutter.exceptions import FailedHookException
 
@@ -82,8 +80,8 @@ def test_pyproject_toml(cookies, context):
     baked_project = cookies.bake(extra_context=context)
     path = os.path.join(str(baked_project.project), 'pyproject.toml')
 
-    with open(path) as pyproject:
-        poetry = tomlkit.parse(pyproject.read())['tool']['poetry']
+    with open(path, mode='rb') as pyproject:
+        poetry = tomli.load(pyproject)['tool']['poetry']
 
     assert poetry['name'] == context['project_name']
     assert poetry['description'] == context['project_description']
