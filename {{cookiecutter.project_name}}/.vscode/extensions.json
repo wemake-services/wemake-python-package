@@ -4,19 +4,22 @@
 
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
-        "ms-python.vscode-pylance",
-        "batisteo.vscode-django",
-        "ms-toolsai.jupyter-keymap",
-        "ms-toolsai.jupyter",
-        "magicstack.magicpython",
-        "ms-python.vscode-pylance",
-        "ms-python.python",
-        "mgesbert.python-path",
-        "himanoa.python-autopep8",
         "almenon.arepl",
-        "guyskk.language-cython",
-        "ms-toolsai.jupyter-renderers",
+        "batisteo.vscode-django",
         "bungcip.better-toml",
+        "guyskk.language-cython",
+        "leonhard-s.python-sphinx-highlight",
+        "magicstack.magicpython",
+        "matangover.mypy",
+        "mgesbert.python-path",
+        "ms-python.flake8",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.jupyter",
+        "njpwerner.autodocstring",
     ],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [
