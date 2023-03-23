@@ -27,7 +27,7 @@ nitpick = "^0.32"
 
 pytest = "^7.1"
 pytest-randomly = "^3.12"
-pytest-cookies = "^0.6"
+pytest-cookies = "^0.7"
 
 safety = "^2.3"
 tomli = "^2.0"
