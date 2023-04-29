@@ -4,7 +4,7 @@ SHELL:=/usr/bin/env bash
 lint:
 	poetry run mypy {{ cookiecutter.project_name.lower().replace('-', '_') }} tests/**/*.py
 	poetry run flake8 .
-	poetry run doc8 -q docs
+	if poetry run command -v doc8 > /dev/null 2>&1; then poetry run doc8 -q docs; fi
 
 .PHONY: unit
 unit:
@@ -18,7 +18,3 @@ package:
 
 .PHONY: test
 test: lint package unit
-
-.DEFAULT:
-	@cd docs && $(MAKE) $@
-
