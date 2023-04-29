@@ -20,14 +20,13 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 
 [tool.poetry.group.test.dependencies]
-mypy = "^0.982"
+mypy = "^1.2"
 
 wemake-python-styleguide = "^0.17"
 flake8-pytest-style = "^1.6"
-doc8 = "^1.0"
 nitpick = "^0.32"
 
 safety = "^2.3"
@@ -44,10 +43,11 @@ sphinx = "^5.2"
 sphinx-autodoc-typehints = "^1.19"
 m2r2 = "^0.3"
 tomli = "^2.0"
+doc8 = "^1.0"
 
 
 [build-system]
-requires = ["poetry-core>=1.2.0"]
+requires = ["poetry-core>=1.5.0"]
 build-backend = "poetry.core.masonry.api"
 
 
