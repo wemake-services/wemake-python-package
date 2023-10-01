@@ -16,7 +16,6 @@ poetry install
 
 To activate your `virtualenv` run `poetry shell`.
 
-
 ## Linting
 
 We use `flake8` to run linting.
@@ -26,9 +25,9 @@ Run:
 ```bash
 flake8 .
 ```
+
 Keep in mind: default virtual environment folder excluded by flake8 style checking is `.venv`.
 If you want to customize this parameter, you should do this in `setup.cfg`.
-
 
 ## Unit tests
 
@@ -38,7 +37,6 @@ We use `pytest` to run unit tests. Run:
 pytest
 ```
 
-
 ## Integration tests
 
 We use `docker` to run integration tests.
@@ -47,7 +45,6 @@ Make sure it is up and running. Then run:
 ```bash
 sh tests/test_integration.sh
 ```
-
 
 ## Other help
 
