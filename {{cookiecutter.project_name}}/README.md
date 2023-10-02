@@ -7,19 +7,16 @@
 
 {{ cookiecutter.project_description }}
 
-
 ## Features
 
 - Fully typed with annotations and checked with mypy, [PEP561 compatible](https://www.python.org/dev/peps/pep-0561/)
 - Add yours!
-
 
 ## Installation
 
 ```bash
 pip install {{ cookiecutter.project_name }}
 ```
-
 
 ## Example
 
@@ -35,7 +32,6 @@ print(some_function(3, 4))
 ## License
 
 [{{ cookiecutter.license }}](https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/blob/master/LICENSE)
-
 
 ## Credits
 

@@ -1,6 +1,5 @@
 # How to contribute
 
-
 ## Dependencies
 
 We use [poetry](https://github.com/python-poetry/poetry) to manage the dependencies.
@@ -13,11 +12,9 @@ poetry install
 
 To activate your `virtualenv` run `poetry shell`.
 
-
 ## One magic command
 
 Run `make test` to run everything we have!
-
 
 ## Tests
 
@@ -35,10 +32,10 @@ To run linting:
 ```bash
 flake8 .
 ```
+
 Keep in mind: default virtual environment folder excluded by flake8 style checking is `.venv`.
 If you want to customize this parameter, you should do this in `setup.cfg`.
 These steps are mandatory during the CI.
-
 
 ## Type checks
 
@@ -50,7 +47,6 @@ mypy {{ cookiecutter.project_name.lower().replace('-', '_') }} tests/**/*.py
 ```
 
 This step is mandatory during the CI.
-
 
 ## Submitting your code
 
@@ -85,7 +81,6 @@ Before submitting your code please do the following steps:
 7. Run `mypy` to ensure that types are correct
 8. Run `flake8` to ensure that style is correct
 9. Run `doc8` to ensure that docs are correct
-
 
 ## Other help
 
