@@ -7,7 +7,7 @@ https://github.com/pydanny/cookiecutter-django
 """
 
 import os
-import subprocess
+import subprocess  # noqa: S404
 import textwrap
 
 # Get the root project directory:
