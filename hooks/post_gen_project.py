@@ -21,14 +21,18 @@ ORGANIZATION = '{{ cookiecutter.organization }}'
 
 def generate_license():
     """Generates license file for the project."""
-    license_result = subprocess.check_output([  # noqa: S603, S607
-        'lice',
-        LICENSE.lower(),
-        '-o',
-        ORGANIZATION,
-        '-p',
-        PROJECT_NAME,
-    ])
+    license_result = subprocess.check_output(  # noqa: S603, S607
+        [
+            'lice',
+            LICENSE.lower(),
+            '-o',
+            ORGANIZATION,
+            '-p',
+            PROJECT_NAME,
+        ],
+        universal_newlines=True,
+        encoding='utf8',
+    )
     with open(
         os.path.join(PROJECT_DIRECTORY, 'LICENSE'),
         mode='w',
