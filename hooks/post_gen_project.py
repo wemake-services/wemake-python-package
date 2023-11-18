@@ -21,7 +21,8 @@ ORGANIZATION = '{{ cookiecutter.organization }}'
 
 def generate_license():
     """Generates license file for the project."""
-    license_result = subprocess.check_output([  # noqa: S603, S606
+    license_result = subprocess.check_output([  # noqa: S603, S607
+        
         'python',
         '-m',
         'lice',
