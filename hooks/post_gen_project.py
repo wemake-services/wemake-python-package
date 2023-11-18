@@ -8,7 +8,6 @@ https://github.com/pydanny/cookiecutter-django
 
 import os
 import subprocess
-import sys
 import textwrap
 
 # Get the root project directory:
@@ -22,10 +21,10 @@ ORGANIZATION = '{{ cookiecutter.organization }}'
 
 def generate_license():
     """Generates license file for the project."""
-    license_result = subprocess.check_output([
+    license_result = subprocess.check_output([  # noqa: S603, S606
         'python',
         '-m',
-        'lice', 
+        'lice',
         LICENSE.lower(),
         '-o',
         ORGANIZATION,
@@ -33,8 +32,8 @@ def generate_license():
         PROJECT_NAME,
     ])
     with open(
-        os.path.join(PROJECT_DIRECTORY, 'LICENSE'), 
-        mode='w', 
+        os.path.join(PROJECT_DIRECTORY, 'LICENSE'),
+        mode='w',
         encoding='utf8',
     ) as license_file:
         license_file.write(license_result)
