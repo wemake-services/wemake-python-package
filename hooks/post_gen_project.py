@@ -7,6 +7,7 @@ https://github.com/pydanny/cookiecutter-django
 """
 
 import os
+import subprocess
 import sys
 import textwrap
 
@@ -21,17 +22,22 @@ ORGANIZATION = '{{ cookiecutter.organization }}'
 
 def generate_license():
     """Generates license file for the project."""
-    license_result = os.system(  # noqa: S605
-        'lice {0} -o {1} -p {2} > {3}/LICENSE'.format(
-            LICENSE.lower(),
-            ORGANIZATION,
-            PROJECT_NAME,
-            PROJECT_DIRECTORY,
-        ),
-    )
-    if license_result:  # it means that return code is not 0, print exception
-        print(license_result)  # noqa: WPS421
-        sys.exit(1)
+    license_result = subprocess.check_output([
+        'python',
+        '-m',
+        'lice', 
+        LICENSE.lower(),
+        '-o',
+        ORGANIZATION,
+        '-p',
+        PROJECT_NAME,
+    ])
+    with open(
+        os.path.join(PROJECT_DIRECTORY, 'LICENSE'), 
+        mode='w', 
+        encoding='utf8',
+    ) as license_file:
+        license_file.write(license_result)
 
 
 def print_futher_instuctions():
