@@ -29,7 +29,7 @@ pytest = "^7.4"
 pytest-randomly = "^3.15"
 pytest-cookies = "^0.7"
 
-safety = "^2.3"
+safety = "^3.0"
 tomli = "^2.0"
 
 
