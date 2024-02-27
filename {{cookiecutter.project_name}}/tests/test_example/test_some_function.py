@@ -9,6 +9,6 @@ from {{ cookiecutter.project_name.lower().replace('-', '_') }}.example import so
     (-2, -3, -5),
     (-5, 5, 0),
 ])
-def test_some_function(first, second, expected):
+def test_some_function(first: int, second: int, expected: int) -> None:
     """Example test with parametrization."""
     assert some_function(first, second) == expected
