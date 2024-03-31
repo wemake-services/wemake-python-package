@@ -14,7 +14,6 @@ Bleeding edge [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) t
 This project is used to scaffold a `python` project structure.
 Just like `poetry new` but better.
 
-
 ## Features
 
 - Always [`up-to-date`](https://github.com/wemake-services/wemake-python-package/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot) dependencies with the help of [`@dependabot`](https://dependabot.com/)
@@ -22,11 +21,10 @@ Just like `poetry new` but better.
 - [`poetry`](https://github.com/python-poetry/poetry) for managing dependencies
 - [`mypy`](https://mypy.readthedocs.io) for optional static typing
 - [`pytest`](https://github.com/pytest-dev/pytest) for testing
-- `flake8` and [`wemake-python-styleguide`](https://github.com/wemake-services/wemake-python-styleguide) for linting
-- `Github Actions` as the default CI
+- [`flake8`](https://github.com/PyCQA/flake8) and [`wemake-python-styleguide`](https://github.com/wemake-services/wemake-python-styleguide) for linting
+- [`Github Actions`](https://docs.github.com/en/actions) as the default CI
 - [`sphinx`](http://www.sphinx-doc.org/en/master/) and [`readthedocs.org`](https://readthedocs.org/) for documentation
 - Easy update process, so your template will always be up-to-date
-
 
 ## Installation
 
@@ -43,17 +41,16 @@ cookiecutter gh:wemake-services/wemake-python-package
 ```
 
 In order for the github actions to work smoothly (ie badge), you must, during the setup, use your github username in the `organization` field.
+
 ```bash
 project_name [my-awesome-project]: foo-project
 organization [wemake.services]: <github_username>
 ```
 
-
 ## Projects using it
 
 Here's [a nice list of real-life open-source usages](https://github.com/search?q=wemake-python-package&type=Code)
 of this template.
-
 
 ## License
 
