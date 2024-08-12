@@ -80,7 +80,7 @@ def test_pyproject_toml(cookies, context):
     baked_project = cookies.bake(extra_context=context)
     path = os.path.join(str(baked_project.project), 'pyproject.toml')
 
-    poetry = tomli.load(Path(path).read_bytes())['tool']['poetry']
+    poetry = tomli.loads(Path(path).read_text())['tool']['poetry']
 
     assert poetry['name'] == context['project_name']
     assert poetry['description'] == context['project_description']
