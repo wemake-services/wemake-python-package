@@ -12,6 +12,7 @@
 
 import os
 import sys
+from pathlib import Path
 
 import tomli
 
@@ -21,8 +22,7 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 
 def _get_project_meta():
-    with open('../pyproject.toml', mode='rb') as pyproject:
-        return tomli.load(pyproject)['tool']['poetry']
+    return tomli.load(Path('../pyproject.toml').read_bytes())['tool']['poetry']
 
 
 pkg_meta = _get_project_meta()

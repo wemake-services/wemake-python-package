@@ -7,6 +7,7 @@ https://github.com/pydanny/cookiecutter-django/blob/master/tests
 
 import os
 import re
+from pathlib import Path
 
 import pytest
 import tomli
@@ -33,8 +34,7 @@ def assert_variables_replaced(paths):
         if is_binary(path):
             continue
 
-        with open(path, 'r') as template_file:
-            file_contents = template_file.read()
+        file_contents = Path(path).read_text()
 
         match = RE_OBJ.search(file_contents)
         msg = 'cookiecutter variable not replaced in {0} at {1}'
@@ -80,8 +80,7 @@ def test_pyproject_toml(cookies, context):
     baked_project = cookies.bake(extra_context=context)
     path = os.path.join(str(baked_project.project), 'pyproject.toml')
 
-    with open(path, mode='rb') as pyproject:
-        poetry = tomli.load(pyproject)['tool']['poetry']
+    poetry = tomli.load(Path(path).read_bytes())['tool']['poetry']
 
     assert poetry['name'] == context['project_name']
     assert poetry['description'] == context['project_description']

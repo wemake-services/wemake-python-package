@@ -9,6 +9,7 @@ https://github.com/pydanny/cookiecutter-django
 import os
 import subprocess  # noqa: S404
 import textwrap
+from pathlib import Path
 
 # Get the root project directory:
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
@@ -33,12 +34,9 @@ def generate_license():
         universal_newlines=True,
         encoding='utf8',
     )
-    with open(
-        os.path.join(PROJECT_DIRECTORY, 'LICENSE'),
-        mode='w',
-        encoding='utf8',
-    ) as license_file:
-        license_file.write(license_result)
+    Path('{0}/LICENSE'.format(PROJECT_DIRECTORY)).write_text(
+        license_result, encoding='utf8',
+    )
 
 
 def print_futher_instuctions():
