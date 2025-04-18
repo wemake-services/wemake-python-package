@@ -20,7 +20,7 @@ lice = "^0.6"
 
 [tool.poetry.group.test.dependencies]
 binaryornot = "^0.4"
-tomli = "^2.0"
+tomli = "^2.2"
 
 wemake-python-styleguide = "^0.19"
 flake8-pytest-style = "^2.0"
