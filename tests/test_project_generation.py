@@ -72,6 +72,9 @@ def test_dynamic_files_generated(
 ) -> None:
     """Ensures that dynamic files are generated."""
     baked_project = cookies.bake(extra_context=context)
+    if baked_project.exception is not None:
+        raise baked_project.exception
+
     base_path = baked_project.project_path
     paths = _build_files_list(base_path)
 
@@ -87,17 +90,20 @@ def test_pyproject_toml(cookies: Cookies, context: dict[str, str]) -> None:
     """Ensures that all variables are replaced inside project files."""
     baked_project = cookies.bake(extra_context=context)
 
-    with (baked_project.project_path / 'pyproject.toml').open(
-        mode='rb',
-    ) as pyproject:
-        poetry = tomli.load(pyproject)['tool']['poetry']
+    pyproject = tomli.loads(
+        (baked_project.project_path / 'pyproject.toml').read_text(),
+    )
 
-    assert poetry['name'] == context['project_name']
-    assert poetry['description'] == context['project_description']
-    assert poetry['repository'] == 'https://github.com/{}/{}'.format(
+    project = pyproject['project']
+    poetry = pyproject['tool']['poetry']
+
+    assert project['name'] == context['project_name']
+    assert project['description'] == context['project_description']
+    assert project['repository'] == 'https://github.com/{}/{}'.format(
         context['organization'],
         context['project_name'],
     )
+    assert poetry
 
 
 @pytest.mark.parametrize(
