@@ -2,9 +2,9 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = dotenv-linter
+SPHINXOPTS    = -W
+SPHINXBUILD   = python -msphinx
+SPHINXPROJ    = {{cookiecutter.project_name}}
 SOURCEDIR     = .
 BUILDDIR      = _build
 
