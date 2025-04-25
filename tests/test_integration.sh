@@ -34,5 +34,9 @@ POETRY_VIRTUALENVS_CREATE=false poetry install
 make test
 
 # Extra tests for the infra:
+git init  # needed for `pre-commit`
+git add --all
+git commit -m 'Initial'
+
 pip install -U pre-commit
 pre-commit run -a
