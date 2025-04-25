@@ -34,9 +34,14 @@ POETRY_VIRTUALENVS_CREATE=false poetry install
 make test
 
 # Extra tests for the infra:
+
+# Setup `git`:
 git init  # needed for `pre-commit`
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
 git add --all
 git commit -m 'Initial'
 
+# Run `pre-commit` checks:
 pip install -U pre-commit
 pre-commit run -a
