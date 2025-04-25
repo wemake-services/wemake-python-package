@@ -216,3 +216,37 @@ fabric.properties
 
 # pyenv
 .python-version
+
+
+#####=== Custom ===#####
+# File types:
+*.sqlite3
+*.db
+
+# Configuration file with private data:
+*.env
+.env
+
+# Artifacts:
+.gitlab/.svn/
+artifacts/
+
+# mypy:
+.mypy_cache/
+
+# pytest and hypothesis
+.pytest_cache/
+.hypothesis/
+
+# ipython:
+.ipython/
+.python_history
+
+# ruff:
+.ruff_cache/
+
+# import-linter:
+.import_linter_cache/
+
+# safety:
+.safety/

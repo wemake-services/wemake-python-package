@@ -6,23 +6,24 @@ https://github.com/pydanny/cookiecutter-django
 
 """
 
-import os
 import subprocess  # noqa: S404
 import textwrap
+from pathlib import Path
+from typing import Final
 
 # Get the root project directory:
-PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
-PROJECT_NAME = '{{ cookiecutter.project_name }}'
+PROJECT_DIRECTORY = Path.cwd().resolve(strict=True)
+PROJECT_NAME: Final = '{{ cookiecutter.project_name }}'
 
 # We need these values to generate correct license:
-LICENSE = '{{ cookiecutter.license }}'
-ORGANIZATION = '{{ cookiecutter.organization }}'
+LICENSE: Final = '{{ cookiecutter.license }}'
+ORGANIZATION: Final = '{{ cookiecutter.organization }}'
 
 
-def generate_license():
+def generate_license() -> None:
     """Generates license file for the project."""
-    license_result = subprocess.check_output(  # noqa: S603, S607
-        [
+    license_result = subprocess.check_output(  # noqa: S603
+        [  # noqa: S607
             'lice',
             LICENSE.lower(),
             '-o',
@@ -33,15 +34,14 @@ def generate_license():
         universal_newlines=True,
         encoding='utf8',
     )
-    with open(
-        os.path.join(PROJECT_DIRECTORY, 'LICENSE'),
+    with (PROJECT_DIRECTORY / 'LICENSE').open(
         mode='w',
         encoding='utf8',
     ) as license_file:
         license_file.write(license_result)
 
 
-def print_futher_instuctions():
+def print_futher_instuctions() -> None:
     """Shows user what to do next after project creation."""
     message = """
     Your project {0} is created.

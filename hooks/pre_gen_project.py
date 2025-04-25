@@ -1,11 +1,12 @@
 import re
 import sys
+from typing import Final
 
-MODULE_REGEX = r'^[a-z][a-z0-9\-]+[a-z0-9]$'
-MODULE_NAME = '{{ cookiecutter.project_name }}'
+MODULE_REGEX: Final = r'^[a-z][a-z0-9\-]+[a-z0-9]$'
+MODULE_NAME: Final = '{{ cookiecutter.project_name }}'
 
 
-def validate_project_name():
+def validate_project_name() -> None:
     """
     This validator is used to ensure that `project_name` is valid.
 
@@ -28,13 +29,11 @@ def validate_project_name():
         raise ValueError(' '.join(message).format(MODULE_NAME))
 
 
-validators = (
-    validate_project_name,
-)
+validators = (validate_project_name,)
 
 for validator in validators:
     try:
         validator()
-    except ValueError as ex:
+    except ValueError as ex:  # noqa: PERF203
         print(ex)  # noqa: WPS421
         sys.exit(1)
