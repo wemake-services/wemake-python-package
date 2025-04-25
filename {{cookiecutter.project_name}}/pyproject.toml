@@ -152,6 +152,8 @@ addopts = [
   "--cov-report=xml",
   "--cov-branch",
   "--cov-fail-under=100",
+  # Ignores:
+  "--ignore=docs",
 ]
 
 
