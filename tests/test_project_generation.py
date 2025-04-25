@@ -54,14 +54,14 @@ def test_with_default_configuration(
 
     assert baked_project.exit_code == 0
     assert baked_project.exception is None
-    assert baked_project.project.basename == context['project_name']
-    assert baked_project.project.isdir()
+    assert baked_project.project_path.name == context['project_name']
+    assert baked_project.project_path.is_dir()
 
 
 def test_variables_replaced(cookies: Cookies, context: dict[str, str]) -> None:
     """Ensures that all variables are replaced inside project files."""
     baked_project = cookies.bake(extra_context=context)
-    paths = _build_files_list(baked_project.project)
+    paths = _build_files_list(baked_project.project_path)
 
     _assert_variables_replaced(paths)
 
@@ -72,7 +72,7 @@ def test_dynamic_files_generated(
 ) -> None:
     """Ensures that dynamic files are generated."""
     baked_project = cookies.bake(extra_context=context)
-    base_path = baked_project.project
+    base_path = baked_project.project_path
     paths = _build_files_list(base_path)
 
     dynamic_files = [
@@ -87,7 +87,7 @@ def test_pyproject_toml(cookies: Cookies, context: dict[str, str]) -> None:
     """Ensures that all variables are replaced inside project files."""
     baked_project = cookies.bake(extra_context=context)
 
-    with (baked_project.project / 'pyproject.toml').open(
+    with (baked_project.project_path / 'pyproject.toml').open(
         mode='rb',
     ) as pyproject:
         poetry = tomli.load(pyproject)['tool']['poetry']

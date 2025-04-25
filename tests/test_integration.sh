@@ -25,6 +25,7 @@ cd "$PROJECT_NAME"
 
 # Create new venv:
 python -m venv .venv
+# shellcheck disable=SC1091
 . .venv/bin/activate
 pip install -U pip
 
