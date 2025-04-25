@@ -32,3 +32,7 @@ pip install -U pip
 # Testing the project:
 POETRY_VIRTUALENVS_CREATE=false poetry install
 make test
+
+# Extra tests for the infra:
+pip install -U pre-commit
+pre-commit run -a
