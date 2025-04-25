@@ -143,9 +143,15 @@ addopts = [
   "--strict-config",
   "--strict-markers",
   "--doctest-modules",
-  # Custom template parts:
-  "--ignore={{cookiecutter.project_name}}",
-  "--ignore=hooks",
+    # Output:
+  "--tb=short",
+  # Coverage:
+  "--cov={{ cookiecutter.project_name.lower().replace('-', '_') }}",
+  "--cov-report=term-missing:skip-covered",
+  "--cov-report=html",
+  "--cov-report=xml",
+  "--cov-branch",
+  "--cov-fail-under=100",
 ]
 
 
