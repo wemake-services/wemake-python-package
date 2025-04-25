@@ -6,7 +6,7 @@ MODULE_REGEX: Final = r'^[a-z][a-z0-9\-]+[a-z0-9]$'
 MODULE_NAME: Final = '{{ cookiecutter.project_name }}'
 
 
-def validate_project_name() -> None:
+def _validate_project_name() -> None:
     """
     This validator is used to ensure that `project_name` is valid.
 
@@ -29,7 +29,27 @@ def validate_project_name() -> None:
         raise ValueError(' '.join(message).format(MODULE_NAME))
 
 
-validators = (validate_project_name,)
+def _validate_deps() -> None:
+    """Ensure that all deps are installed."""
+    try:
+        import lice  # noqa: F401, PLC0415
+    except ImportError:
+        raise RuntimeError(
+            'lice is not installed, please install it before proceeding',
+        ) from None
+
+    try:
+        import jinja2_git  # noqa: F401, PLC0415
+    except ImportError:
+        raise RuntimeError(
+            'jinja2_git is not installed, please install it before proceeding',
+        ) from None
+
+
+validators = (
+    _validate_project_name,
+    _validate_deps,
+)
 
 for validator in validators:
     try:
