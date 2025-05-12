@@ -1,6 +1,6 @@
 # {{ cookiecutter.project_name }}
 
-[![Build Status](https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/workflows/test/badge.svg?branch=master&event=push)](https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/actions?query=workflow%3Atest)
+[![test](https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/actions/workflows/test.yml/badge.svg?event=push)](https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/actions/workflows/test.yml)
 [![codecov](https://codecov.io/gh/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/branch/master/graph/badge.svg)](https://codecov.io/gh/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }})
 [![Python Version](https://img.shields.io/pypi/pyversions/{{ cookiecutter.project_name }}.svg)](https://pypi.org/project/{{ cookiecutter.project_name }}/)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
