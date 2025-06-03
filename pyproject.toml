@@ -38,7 +38,7 @@ ruff = "^0.11"
 
 mypy = "^1.16"
 
-pytest = "^8.3"
+pytest = "^8.4"
 pytest-randomly = "^3.16"
 pytest-cookies = "^0.7"
 
