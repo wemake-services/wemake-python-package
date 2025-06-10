@@ -1,3 +1,8 @@
+[build-system]
+requires = ["poetry-core>=2.0"]
+build-backend = "poetry.core.masonry.api"
+
+
 [project]
 name = "{{ cookiecutter.project_name }}"
 description = "{{ cookiecutter.project_description }}"
@@ -10,11 +15,6 @@ dynamic = ["dependencies", "classifiers"]
 
 authors = []
 keywords = []
-
-
-[build-system]
-requires = ["poetry-core>=2.0"]
-build-backend = "poetry.core.masonry.api"
 
 
 [tool.poetry]
@@ -46,7 +46,6 @@ sphinx-autodoc-typehints = "^3.0"
 tomli = "^2.2"
 myst-parser = "^4.0"
 furo = "^2024.8"
-doc8 = "^1.1"
 
 
 [tool.ruff]

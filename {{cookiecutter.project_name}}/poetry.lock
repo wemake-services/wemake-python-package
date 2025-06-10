@@ -277,25 +277,6 @@ tomli = {version = "*", optional = true, markers = "python_full_version <= \"3.1
 toml = ["tomli ; python_full_version <= \"3.11.0a6\""]
 
 [[package]]
-name = "doc8"
-version = "1.1.2"
-description = "Style checker for Sphinx (or other) RST documentation"
-optional = false
-python-versions = ">=3.8"
-groups = ["docs"]
-files = [
-    {file = "doc8-1.1.2-py3-none-any.whl", hash = "sha256:e787b3076b391b8b49400da5d018bacafe592dfc0a04f35a9be22d0122b82b59"},
-    {file = "doc8-1.1.2.tar.gz", hash = "sha256:1225f30144e1cc97e388dbaf7fe3e996d2897473a53a6dae268ddde21c354b98"},
-]
-
-[package.dependencies]
-docutils = ">=0.19,<=0.21.2"
-Pygments = "*"
-restructuredtext-lint = ">=0.7"
-stevedore = "*"
-tomli = {version = "*", markers = "python_version < \"3.11\""}
-
-[[package]]
 name = "docutils"
 version = "0.21.2"
 description = "Docutils -- Python Documentation Utilities"
@@ -661,21 +642,6 @@ files = [
 ]
 
 [[package]]
-name = "pbr"
-version = "6.1.1"
-description = "Python Build Reasonableness"
-optional = false
-python-versions = ">=2.6"
-groups = ["docs"]
-files = [
-    {file = "pbr-6.1.1-py2.py3-none-any.whl", hash = "sha256:38d4daea5d9fa63b3f626131b9d34947fd0c8be9b05a29276870580050a25a76"},
-    {file = "pbr-6.1.1.tar.gz", hash = "sha256:93ea72ce6989eb2eed99d0f75721474f69ad88128afdef5ac377eb797c4bf76b"},
-]
-
-[package.dependencies]
-setuptools = "*"
-
-[[package]]
 name = "pluggy"
 version = "1.5.0"
 description = "plugin and hook calling mechanisms for python"
@@ -873,20 +839,6 @@ socks = ["PySocks (>=1.5.6,!=1.5.7)"]
 use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
-name = "restructuredtext-lint"
-version = "1.4.0"
-description = "reStructuredText linter"
-optional = false
-python-versions = "*"
-groups = ["docs"]
-files = [
-    {file = "restructuredtext_lint-1.4.0.tar.gz", hash = "sha256:1b235c0c922341ab6c530390892eb9e92f90b9b75046063e047cacfb0f050c45"},
-]
-
-[package.dependencies]
-docutils = ">=0.11,<1.0"
-
-[[package]]
 name = "ruff"
 version = "0.11.7"
 description = "An extremely fast Python linter and code formatter, written in Rust."
@@ -913,27 +865,6 @@ files = [
     {file = "ruff-0.11.7-py3-none-win_arm64.whl", hash = "sha256:778c1e5d6f9e91034142dfd06110534ca13220bfaad5c3735f6cb844654f6177"},
     {file = "ruff-0.11.7.tar.gz", hash = "sha256:655089ad3224070736dc32844fde783454f8558e71f501cb207485fe4eee23d4"},
 ]
-
-[[package]]
-name = "setuptools"
-version = "79.0.1"
-description = "Easily download, build, install, upgrade, and uninstall Python packages"
-optional = false
-python-versions = ">=3.9"
-groups = ["docs"]
-files = [
-    {file = "setuptools-79.0.1-py3-none-any.whl", hash = "sha256:e147c0549f27767ba362f9da434eab9c5dc0045d5304feb602a0af001089fc51"},
-    {file = "setuptools-79.0.1.tar.gz", hash = "sha256:128ce7b8f33c3079fd1b067ecbb4051a66e8526e7b65f6cec075dfc650ddfa88"},
-]
-
-[package.extras]
-check = ["pytest-checkdocs (>=2.4)", "pytest-ruff (>=0.2.1) ; sys_platform != \"cygwin\"", "ruff (>=0.8.0) ; sys_platform != \"cygwin\""]
-core = ["importlib_metadata (>=6) ; python_version < \"3.10\"", "jaraco.functools (>=4)", "jaraco.text (>=3.7)", "more_itertools", "more_itertools (>=8.8)", "packaging (>=24.2)", "platformdirs (>=4.2.2)", "tomli (>=2.0.1) ; python_version < \"3.11\"", "wheel (>=0.43.0)"]
-cover = ["pytest-cov"]
-doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "pygments-github-lexers (==0.0.5)", "pyproject-hooks (!=1.1)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-favicon", "sphinx-inline-tabs", "sphinx-lint", "sphinx-notfound-page (>=1,<2)", "sphinx-reredirects", "sphinxcontrib-towncrier", "towncrier (<24.7)"]
-enabler = ["pytest-enabler (>=2.2)"]
-test = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "ini2toml[lite] (>=0.14)", "jaraco.develop (>=7.21) ; python_version >= \"3.9\" and sys_platform != \"cygwin\"", "jaraco.envs (>=2.2)", "jaraco.path (>=3.7.2)", "jaraco.test (>=5.5)", "packaging (>=24.2)", "pip (>=19.1)", "pyproject-hooks (!=1.1)", "pytest (>=6,!=8.1.*)", "pytest-home (>=0.5)", "pytest-perf ; sys_platform != \"cygwin\"", "pytest-subprocess", "pytest-timeout", "pytest-xdist (>=3)", "tomli-w (>=1.0.0)", "virtualenv (>=13.0.0)", "wheel (>=0.44.0)"]
-type = ["importlib_metadata (>=7.0.2) ; python_version < \"3.10\"", "jaraco.develop (>=7.21) ; sys_platform != \"cygwin\"", "mypy (==1.14.*)", "pytest-mypy"]
 
 [[package]]
 name = "snowballstemmer"
@@ -1133,21 +1064,6 @@ standalone = ["Sphinx (>=5)"]
 test = ["pytest"]
 
 [[package]]
-name = "stevedore"
-version = "5.4.1"
-description = "Manage dynamic plugins for Python applications"
-optional = false
-python-versions = ">=3.9"
-groups = ["docs"]
-files = [
-    {file = "stevedore-5.4.1-py3-none-any.whl", hash = "sha256:d10a31c7b86cba16c1f6e8d15416955fc797052351a56af15e608ad20811fcfe"},
-    {file = "stevedore-5.4.1.tar.gz", hash = "sha256:3135b5ae50fe12816ef291baff420acb727fcd356106e3e9cbfa9e5985cd6f4b"},
-]
-
-[package.dependencies]
-pbr = ">=2.0.0"
-
-[[package]]
 name = "tomli"
 version = "2.2.1"
 description = "A lil' TOML parser"
@@ -1239,4 +1155,4 @@ pygments = ">=2.5,<3.0"
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<3.14"
-content-hash = "cc3bcd61152c5e0256c034a2edad68ab0e6ec689f1e6abc39dd6f9d25f6f8989"
+content-hash = "3dd41eef4e2ee4f0d882a389ebfcc67f4eeee240cabca7f76daf4d3692df22da"

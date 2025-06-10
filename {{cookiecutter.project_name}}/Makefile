@@ -6,7 +6,6 @@ lint:
 	poetry run ruff format --check --diff
 	poetry run flake8 .
 	poetry run mypy .
-	if poetry run command -v doc8 > /dev/null 2>&1; then poetry run doc8 -q docs; fi
 
 .PHONY: unit
 unit:

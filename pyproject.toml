@@ -1,3 +1,8 @@
+[build-system]
+requires = ["poetry-core>=2.0"]
+build-backend = "poetry.core.masonry.api"
+
+
 [project]
 name = "wemake-python-package"
 description = "Bleeding edge cookiecutter template to create new python packages"
@@ -9,11 +14,6 @@ authors = [
 ]
 license = "MIT"
 dynamic = ["dependencies", "classifiers"]
-
-
-[build-system]
-requires = ["poetry-core>=2.0"]
-build-backend = "poetry.core.masonry.api"
 
 
 [tool.poetry]
