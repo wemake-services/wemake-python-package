@@ -32,7 +32,13 @@ Just like `poetry new` but better.
 Firstly, you will need to install dependencies:
 
 ```bash
-pip install cookiecutter jinja2-git lice
+pip install cookiecutter jinja2-git lice setuptools
+```
+
+Or with [`uvx`](https://docs.astral.sh/uv/guides/tools):
+
+```bash
+uvx --with jinja2-git --with lice --with setuptools cookiecutter gh:wemake-services/wemake-python-package
 ```
 
 Then, create a project itself:
