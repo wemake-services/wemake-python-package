@@ -10,11 +10,13 @@ repository = "https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter
 version = "0.1.0"
 requires-python = ">=3.10,<3.14"
 readme = "README.md"
-license = "{{ cookiecutter.license|upper }}"
+license = { text = "{{ cookiecutter.license|upper }}" }
 dynamic = ["dependencies", "classifiers"]
 
 authors = []
-keywords = []
+keywords = [
+  "wemake-python-package",
+]
 
 
 [tool.poetry]
