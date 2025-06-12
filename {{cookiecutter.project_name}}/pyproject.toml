@@ -166,10 +166,6 @@ strict_bytes = true
 local_partial_types = true
 warn_unreachable = true
 
-exclude = [
-  '{{cookiecutter.project_name}}',
-]
-
 enable_error_code = [
   "truthy-bool",
   "truthy-iterable",
