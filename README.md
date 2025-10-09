@@ -35,16 +35,16 @@ Firstly, you will need to install dependencies:
 pip install cookiecutter jinja2-git lice setuptools
 ```
 
-Or with [`uvx`](https://docs.astral.sh/uv/guides/tools):
-
-```bash
-uvx --with jinja2-git --with lice --with setuptools cookiecutter gh:wemake-services/wemake-python-package
-```
-
 Then, create a project itself:
 
 ```bash
 cookiecutter gh:wemake-services/wemake-python-package
+```
+
+Or with [`uvx`](https://docs.astral.sh/uv/guides/tools) with just a single command:
+
+```bash
+uvx --with jinja2-git --with lice --with setuptools cookiecutter gh:wemake-services/wemake-python-package
 ```
 
 In order for the github actions to work smoothly (ie badge), you must, during the setup, use your github username in the `organization` field.
