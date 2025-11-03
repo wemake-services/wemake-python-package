@@ -32,7 +32,7 @@ repos:
           - "github.com/wasilibs/go-shellcheck/cmd/shellcheck@latest"
 
   - repo: https://github.com/woodruffw/zizmor-pre-commit
-    rev: v1.16.0
+    rev: v1.16.2
     hooks:
       - id: zizmor
 
