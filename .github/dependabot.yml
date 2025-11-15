@@ -6,6 +6,8 @@ updates:
     interval: daily
     time: "02:00"
   open-pull-requests-limit: 10
+  cooldown:
+    default-days: 7
 
 - package-ecosystem: pip
   directory: "/{{cookiecutter.project_name}}"
@@ -13,6 +15,8 @@ updates:
     interval: daily
     time: "02:00"
   open-pull-requests-limit: 10
+  cooldown:
+    default-days: 7
 
 - package-ecosystem: github-actions
   directory: "/"
@@ -20,3 +24,5 @@ updates:
     interval: daily
     time: "02:00"
   open-pull-requests-limit: 10
+  cooldown:
+    default-days: 7
