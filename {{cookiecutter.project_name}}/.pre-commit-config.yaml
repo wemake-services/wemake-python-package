@@ -1,6 +1,46 @@
 repos:
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.35.0
+    hooks:
+      - id: check-dependabot
+      - id: check-github-workflows
+      - id: check-github-actions
+      - id: check-readthedocs
+
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.8
+    hooks:
+      - id: actionlint
+        additional_dependencies:
+          - "github.com/wasilibs/go-shellcheck/cmd/shellcheck@latest"
+
+  - repo: https://github.com/woodruffw/zizmor-pre-commit
+    rev: v1.16.3
+    hooks:
+      - id: zizmor
+        args: ["--no-progress", "--fix"]
+
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.11.0.1
+    hooks:
+      - id: shellcheck
+        args: ["--severity=style"]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.5
+    hooks:
+      - id: ruff
+        args: ["--exit-non-zero-on-fix"]
+      - id: ruff-format
+
+  - repo: https://github.com/sphinx-contrib/sphinx-lint
+    rev: v1.0.1
+    hooks:
+      - id: sphinx-lint
+        args: ["--enable=default-role"]
+        files: ^docs/
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -13,38 +53,6 @@ repos:
       - id: mixed-line-ending
         args: ["--fix=lf"]
       - id: check-case-conflict
-
-  - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.33.0
-    hooks:
-      - id: check-dependabot
-      - id: check-github-workflows
-      - id: check-github-actions
-      - id: check-readthedocs
-
-  - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.7
-    hooks:
-      - id: actionlint
-        additional_dependencies:
-          - "github.com/wasilibs/go-shellcheck/cmd/shellcheck@latest"
-
-  - repo: https://github.com/woodruffw/zizmor-pre-commit
-    rev: v1.6.0
-    hooks:
-      - id: zizmor
-
-  - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.10.0.1
-    hooks:
-      - id: shellcheck
-        args: ["--severity=style"]
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.13
-    hooks:
-      - id: ruff
-        args: ["--exit-non-zero-on-fix"]
-      - id: ruff-format
 
   # Should be the last:
   - repo: meta
