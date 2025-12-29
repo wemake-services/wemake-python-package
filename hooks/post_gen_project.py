@@ -46,7 +46,7 @@ def generate_license() -> None:
         license_file.write('\n')
 
 
-def print_futher_instuctions() -> None:
+def print_further_instructions() -> None:
     """Shows user what to do next after project creation."""
     message = """
     Your project {0} is created.
@@ -58,4 +58,4 @@ def print_futher_instuctions() -> None:
 
 
 generate_license()
-print_futher_instuctions()
+print_further_instructions()
