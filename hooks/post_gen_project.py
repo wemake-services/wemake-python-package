@@ -39,7 +39,8 @@ def generate_license() -> None:
         encoding='utf8',
     ) as license_file:
         license_file.write(
-            license_result.strip()
+            license_result
+            .strip()
             .replace(' \n ', ' \n')
             .replace('\n \n', '\n\n'),
         )
