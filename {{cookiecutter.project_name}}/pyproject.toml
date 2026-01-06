@@ -3,23 +3,21 @@ requires = ["poetry-core>=2.0"]
 build-backend = "poetry.core.masonry.api"
 
 
-[project]
+[tool.poetry]
 name = "{{ cookiecutter.project_name }}"
 description = "{{ cookiecutter.project_description }}"
 repository = "https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}"
 version = "0.1.0"
-requires-python = ">=3.10,<3.14"
 readme = "README.md"
-license = { text = "{{ cookiecutter.license|upper }}" }
-dynamic = ["dependencies", "classifiers"]
+license = "{{ cookiecutter.license|upper }}"
 
-authors = []
+authors = [
+  "{{ cookiecutter.organization }}",
+]
 keywords = [
   "wemake-python-package",
 ]
 
-
-[tool.poetry]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
@@ -28,16 +26,17 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
+python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.16"
+mypy = "^1.19"
 
-wemake-python-styleguide = "^1.1"
-ruff = "^0.11"
+wemake-python-styleguide = "^1.5"
+ruff = "^0.14"
 
-pytest = "^8.4"
+pytest = "^9.0"
 pytest-cov = "^6.1"
-pytest-randomly = "^3.16"
+pytest-randomly = "^4.0"
 
 [tool.poetry.group.docs]
 optional = true

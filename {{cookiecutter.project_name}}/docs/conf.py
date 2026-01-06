@@ -28,7 +28,7 @@ def _get_project_meta() -> dict[str, str]:
     pyproject = _ROOT / 'pyproject.toml'
     return cast(
         dict[str, str],
-        tomli.loads(pyproject.read_text())['project'],
+        tomli.loads(pyproject.read_text())['tool']['poetry'],
     )
 
 
