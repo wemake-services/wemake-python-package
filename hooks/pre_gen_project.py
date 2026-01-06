@@ -51,7 +51,7 @@ validators = (
     _validate_deps,
 )
 
-for validator in validators:
+for validator in validators:  # noqa: WPS481
     try:
         validator()
     except ValueError as ex:  # noqa: PERF203

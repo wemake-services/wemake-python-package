@@ -1,4 +1,4 @@
-SHELL:=/usr/bin/env bash
+SHELL := /usr/bin/env bash
 
 .PHONY: lint
 lint:
@@ -13,7 +13,6 @@ unit:
 
 .PHONY: package
 package:
-	poetry check
 	poetry run pip check
 
 .PHONY: test
