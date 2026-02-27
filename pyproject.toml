@@ -29,7 +29,7 @@ setuptools = "*"
 binaryornot = "^0.4"
 tomli = "^2.4"
 
-wemake-python-styleguide = "^1.5"
+wemake-python-styleguide = "^1.6"
 ruff = "^0.15"
 
 mypy = "^1.19"
