@@ -20,7 +20,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-cookiecutter = "^2.6"
+cookiecutter = "^2.7"
 jinja2-git = "^1.4"
 lice = "^0.6"
 setuptools = "*"
