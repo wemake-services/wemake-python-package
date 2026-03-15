@@ -1,19 +1,20 @@
 SHELL := /usr/bin/env bash
+POETRY ?= poetry
 
 .PHONY: lint
 lint:
-	poetry run ruff check --exit-non-zero-on-fix
-	poetry run ruff format --check --diff
-	poetry run flake8 .
-	poetry run mypy .
+	$(POETRY) run ruff check --exit-non-zero-on-fix
+	$(POETRY) run ruff format --check --diff
+	$(POETRY) run flake8 .
+	$(POETRY) run mypy .
 
 .PHONY: unit
 unit:
-	poetry run pytest
+	$(POETRY) run pytest
 
 .PHONY: package
 package:
-	poetry run pip check
+	$(POETRY) run pip check
 
 .PHONY: test
 test: lint package unit
