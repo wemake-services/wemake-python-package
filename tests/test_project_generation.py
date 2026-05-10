@@ -108,7 +108,7 @@ def test_pyproject_toml(cookies: Cookies, context: dict[str, str]) -> None:
     ('prompt', 'entered_value'),
     [
         ('project_name', 'myProject'),
-        ('project_name', '43prject'),
+        ('project_name', '43project'),
         ('project_name', '_test'),
         ('project_name', '-test'),
         ('project_name', 'test-'),
