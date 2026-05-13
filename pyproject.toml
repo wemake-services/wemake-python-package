@@ -150,8 +150,7 @@ addopts = [
 # The mypy configurations: http://bit.ly/2zEl9WI
 ignore_missing_imports = true
 strict = true
-strict_bytes = true
-local_partial_types = true
+strict_equality_for_none = true
 warn_unreachable = true
 
 exclude = [
@@ -159,17 +158,17 @@ exclude = [
 ]
 
 enable_error_code = [
-  "truthy-bool",
-  "truthy-iterable",
-  "redundant-expr",
-  "unused-awaitable",
+  "deprecated",
+  "exhaustive-match",
+  "explicit-override",
   "ignore-without-code",
   "possibly-undefined",
+  "redundant-expr",
   "redundant-self",
-  "explicit-override",
-  "mutable-override",
+  "truthy-bool",
+  "truthy-iterable",
   "unimported-reveal",
-  "deprecated",
+  "unused-awaitable",
 ]
 
 
