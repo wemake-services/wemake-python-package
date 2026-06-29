@@ -36,6 +36,7 @@ ruff = "^0.14"
 
 pytest = "^9.0"
 pytest-cov = "^6.1"
+covdefaults = "^2.3"
 pytest-randomly = "^4.0"
 
 [tool.poetry.group.docs]
@@ -48,6 +49,9 @@ tomli = "^2.2"
 myst-parser = "^4.0"
 furo = "^2024.8"
 
+[tool.coverage.run]
+# Covdefaults: https://pypi.org/project/covdefaults
+plugins = ["covdefaults"]
 
 [tool.ruff]
 # Ruff config: https://docs.astral.sh/ruff/settings
