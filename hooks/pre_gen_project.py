@@ -32,14 +32,14 @@ def _validate_project_name() -> None:
 def _validate_deps() -> None:
     """Ensure that all deps are installed."""
     try:
-        import lice  # noqa: F401, PLC0415
+        import lice  # ruff: ignore[unused-import, import-outside-top-level]
     except ImportError:
         raise RuntimeError(
             'lice is not installed, please install it before proceeding',
         ) from None
 
     try:
-        import jinja2_git  # noqa: F401, PLC0415
+        import jinja2_git  # ruff: ignore[unused-import, import-outside-top-level]
     except ImportError:
         raise RuntimeError(
             'jinja2_git is not installed, please install it before proceeding',
@@ -54,6 +54,6 @@ validators = (
 for validator in validators:  # noqa: WPS481
     try:
         validator()
-    except ValueError as ex:  # noqa: PERF203
+    except ValueError as ex:  # ruff: ignore[try-except-in-loop]
         print(ex)  # noqa: WPS421
         sys.exit(1)
