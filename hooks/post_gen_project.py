@@ -6,7 +6,7 @@ https://github.com/pydanny/cookiecutter-django
 
 """
 
-import subprocess  # ruff: ignore[suspicious-subprocess-import]
+import subprocess  # noqa: S404
 import textwrap
 from pathlib import Path
 from typing import Final
@@ -22,8 +22,8 @@ ORGANIZATION: Final = '{{ cookiecutter.organization }}'
 
 def generate_license() -> None:
     """Generates license file for the project."""
-    license_result = subprocess.check_output(  # ruff: ignore[subprocess-without-shell-equals-true]
-        [  # ruff: ignore[start-process-with-partial-path]
+    license_result = subprocess.check_output(  # noqa: S603
+        [  # noqa: S607
             'lice',
             LICENSE.lower(),
             '-o',
