@@ -54,6 +54,6 @@ validators = (
 for validator in validators:  # noqa: WPS481
     try:
         validator()
-    except ValueError as ex:  # noqa: PERF203
+    except ValueError as ex:
         print(ex)  # noqa: WPS421
         sys.exit(1)

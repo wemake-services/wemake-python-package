@@ -19,14 +19,13 @@ classifiers = [
 
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.11"
 cookiecutter = "^2.7"
 jinja2-git = "^1.4"
 lice2 = "^0.13"
 
 [tool.poetry.group.dev.dependencies]
 binaryornot = "^0.6"
-tomli = "^2.4"
 
 wemake-python-styleguide = "^1.7"
 ruff = "^0.16"
@@ -42,7 +41,7 @@ pytest-cookies = "^0.7"
 # Ruff config: https://docs.astral.sh/ruff/settings
 preview = true
 fix = true
-target-version = "py310"
+target-version = "py311"
 line-length = 80
 extend-exclude = [
   # Internal project:
