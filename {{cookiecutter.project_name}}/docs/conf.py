@@ -14,7 +14,8 @@ import sys
 from pathlib import Path
 from typing import cast
 
-import tomli
+# NOTE: replace it with `tomllib` on 3.11+
+import tomli  # type: ignore[import-not-found]
 
 # We need `server` to be importable from here:
 _ROOT = Path('..').resolve(strict=True)
