@@ -32,7 +32,7 @@ def _validate_project_name() -> None:
 def _validate_deps() -> None:
     """Ensure that all deps are installed."""
     try:
-        import lice  # noqa: F401, PLC0415
+        import lice2  # noqa: F401, PLC0415
     except ImportError:
         raise RuntimeError(
             'lice is not installed, please install it before proceeding',
@@ -54,6 +54,6 @@ validators = (
 for validator in validators:  # noqa: WPS481
     try:
         validator()
-    except ValueError as ex:  # noqa: PERF203
+    except ValueError as ex:
         print(ex)  # noqa: WPS421
         sys.exit(1)

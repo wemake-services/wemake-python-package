@@ -32,7 +32,7 @@ Just like `poetry new` but better.
 Firstly, you will need to install dependencies:
 
 ```bash
-pip install cookiecutter jinja2-git lice setuptools
+pip install cookiecutter jinja2-git lice2
 ```
 
 Then, create a project itself:
@@ -44,7 +44,7 @@ cookiecutter gh:wemake-services/wemake-python-package
 Or with [`uvx`](https://docs.astral.sh/uv/guides/tools) with just a single command:
 
 ```bash
-uvx --with jinja2-git --with lice --with setuptools cookiecutter gh:wemake-services/wemake-python-package
+uvx --with jinja2-git --with lice2 cookiecutter gh:wemake-services/wemake-python-package
 ```
 
 In order for the github actions to work smoothly (ie badge), you must, during the setup, use your github username in the `organization` field.
