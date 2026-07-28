@@ -29,15 +29,15 @@ classifiers = [
 python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.19"
+mypy = "^2.3"
 
-wemake-python-styleguide = "^1.5"
-ruff = "^0.14"
+wemake-python-styleguide = "^1.7"
+ruff = "^0.16"
 
-pytest = "^9.0"
-pytest-cov = "^6.1"
+pytest = "^9.1"
+pytest-cov = "^6.3"
 covdefaults = "^2.3"
-pytest-randomly = "^4.0"
+pytest-randomly = "^4.1"
 
 [tool.poetry.group.docs]
 optional = true
@@ -123,6 +123,9 @@ ignore = [
   "PLR09",   # we have our own complexity rules
   "PLR2004", # do not report magic numbers
   "PLR6301", # do not require classmethod / staticmethod when self not used
+  "RUF105",  # keep old `# noqa` comments style, not `# ruff` comments
+  "RUF106",  # we prefer old error codes
+  "RUF201",  # keep old rule codes instead of verbose names
   "TRY003",  # long exception messages from `tryceratops`
 ]
 external = [ "WPS" ]
@@ -152,6 +155,7 @@ addopts = [
   "--tb=short",
   # Coverage:
   "--cov={{ cookiecutter.project_name.lower().replace('-', '_') }}",
+  "--cov=tests",
   "--cov-report=term-missing:skip-covered",
   "--cov-report=html",
   "--cov-report=xml",
@@ -164,10 +168,8 @@ addopts = [
 
 [tool.mypy]
 # The mypy configurations: http://bit.ly/2zEl9WI
-ignore_missing_imports = true
 strict = true
-strict_bytes = true
-local_partial_types = true
+strict_equality_for_none = true
 warn_unreachable = true
 
 enable_error_code = [

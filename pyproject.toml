@@ -29,13 +29,13 @@ setuptools = "*"
 binaryornot = "^0.6"
 tomli = "^2.4"
 
-wemake-python-styleguide = "^1.6"
-ruff = "^0.15"
+wemake-python-styleguide = "^1.7"
+ruff = "^0.16"
 
-mypy = ">=1.20,<3.0"
+mypy = "^2.3"
 
-pytest = "^9.0"
-pytest-randomly = "^4.0"
+pytest = "^9.1"
+pytest-randomly = "^4.1"
 pytest-cookies = "^0.7"
 
 
@@ -112,6 +112,9 @@ ignore = [
   "PLR09",   # we have our own complexity rules
   "PLR2004", # do not report magic numbers
   "PLR6301", # do not require classmethod / staticmethod when self not used
+  "RUF105",  # keep old `# noqa` comments style, not `# ruff` comments
+  "RUF106",  # we prefer old error codes
+  "RUF201",  # keep old rule codes instead of verbose names
   "TRY003",  # long exception messages from `tryceratops`
 ]
 external = [ "WPS" ]
