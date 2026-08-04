@@ -192,3 +192,13 @@ extend-exclude = [
   ".mypy_cache",
   "*.lock",
 ]
+
+
+
+[tool.pyproject-fmt]
+# Docs: https://pyproject-fmt.readthedocs.io/en/latest/configuration.html
+column_width = 80
+generate_python_version_classifiers = false
+table_format = "long"
+sub_table_spacing = "\n"
+separate_root_table = "\n\n"
