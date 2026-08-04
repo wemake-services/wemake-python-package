@@ -5,14 +5,14 @@ requires = [ "poetry-core>=2" ]
 
 [tool.poetry]
 name = "{{ cookiecutter.project_name }}"
-description = "{{ cookiecutter.project_description }}"
-repository = "https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}"
 version = "0.1.0"
+description = "{{ cookiecutter.project_description }}"
 license = "{{ cookiecutter.license|upper }}"
 authors = [
   "{{ cookiecutter.organization }}",
 ]
 readme = "README.md"
+repository = "https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}"
 keywords = [
   "wemake-python-package",
 ]
