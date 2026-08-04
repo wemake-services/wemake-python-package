@@ -1,23 +1,21 @@
 [build-system]
-requires = ["poetry-core>=2.0"]
 build-backend = "poetry.core.masonry.api"
+requires = [ "poetry-core>=2" ]
 
 
 [tool.poetry]
 name = "{{ cookiecutter.project_name }}"
-description = "{{ cookiecutter.project_description }}"
-repository = "https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}"
 version = "0.1.0"
-readme = "README.md"
+description = "{{ cookiecutter.project_description }}"
 license = "{{ cookiecutter.license|upper }}"
-
 authors = [
   "{{ cookiecutter.organization }}",
 ]
+readme = "README.md"
+repository = "https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}"
 keywords = [
   "wemake-python-package",
 ]
-
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
@@ -29,36 +27,31 @@ classifiers = [
 python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
+covdefaults = "^2.3"
 mypy = "^2.3"
-
-wemake-python-styleguide = "^1.7"
-ruff = "^0.16"
-
 pytest = "^9.1"
 pytest-cov = "^6.3"
-covdefaults = "^2.3"
 pytest-randomly = "^4.1"
+ruff = "^0.16"
+wemake-python-styleguide = "^1.7"
 
 [tool.poetry.group.docs]
 optional = true
 
 [tool.poetry.group.docs.dependencies]
-sphinx = "^8.1"
+furo = "^2025.12"
+myst-parser = "^5.1"
+sphinx = "^9.0"
 sphinx-autodoc-typehints = "^3.0"
-myst-parser = "^4.0"
-furo = "^2024.8"
 
-[tool.coverage.run]
-# Covdefaults: https://pypi.org/project/covdefaults
-plugins = ["covdefaults"]
 
 [tool.ruff]
+target-version = "py311"
+line-length = 80
 # Ruff config: https://docs.astral.sh/ruff/settings
 preview = true
 fix = true
 output-prefer-rule-codes = true
-target-version = "py311"
-line-length = 80
 
 [tool.ruff.format]
 quote-style = "single"
@@ -66,48 +59,49 @@ docstring-code-format = true
 
 [tool.ruff.lint]
 select = [
-  "A",    # flake8-builtins
-  "B",    # flake8-bugbear
-  "C4",   # flake8-comprehensions
-  "C90",  # maccabe
-  "COM",  # flake8-commas
-  "D",    # pydocstyle
-  "DTZ",  # flake8-datetimez
-  "E",    # pycodestyle
-  "ERA",  # flake8-eradicate
-  "EXE",  # flake8-executable
-  "F",    # pyflakes
-  "FBT",  # flake8-boolean-trap
-  "FLY",  # pyflint
-  "FURB", # refurb
-  "G",    # flake8-logging-format
-  "I",    # isort
-  "ICN",  # flake8-import-conventions
-  "ISC",  # flake8-implicit-str-concat
-  "LOG",  # flake8-logging
-  "N",    # pep8-naming
-  "PERF", # perflint
-  "PIE",  # flake8-pie
-  "PL",   # pylint
-  "PT",   # flake8-pytest-style
-  "PTH",  # flake8-use-pathlib
-  "Q",    # flake8-quotes
-  "RET",  # flake8-return
-  "RSE",  # flake8-raise
-  "RUF",  # ruff
-  "S",    # flake8-bandit
-  "SIM",  # flake8-simpify
-  "SLF",  # flake8-self
-  "SLOT", # flake8-slots
-  "T100", # flake8-debugger
-  "TRY",  # tryceratops
-  "UP",   # pyupgrade
-  "W",    # pycodestyle
-  "YTT",  # flake8-2020
+  "A",     # flake8-builtins
+  "ASYNC", # flake8-async
+  "B",     # flake8-bugbear
+  "C4",    # flake8-comprehensions
+  "C90",   # maccabe
+  "COM",   # flake8-commas
+  "D",     # pydocstyle
+  "DTZ",   # flake8-datetimez
+  "E",     # pycodestyle
+  "ERA",   # flake8-eradicate
+  "EXE",   # flake8-executable
+  "F",     # pyflakes
+  "FBT",   # flake8-boolean-trap
+  "FLY",   # pyflint
+  "FURB",  # refurb
+  "G",     # flake8-logging-format
+  "I",     # isort
+  "ICN",   # flake8-import-conventions
+  "ISC",   # flake8-implicit-str-concat
+  "LOG",   # flake8-logging
+  "N",     # pep8-naming
+  "PERF",  # perflint
+  "PIE",   # flake8-pie
+  "PL",    # pylint
+  "PT",    # flake8-pytest-style
+  "PTH",   # flake8-use-pathlib
+  "Q",     # flake8-quotes
+  "RET",   # flake8-return
+  "RSE",   # flake8-raise
+  "RUF",   # ruff
+  "S",     # flake8-bandit
+  "SIM",   # flake8-simpify
+  "SLF",   # flake8-self
+  "SLOT",  # flake8-slots
+  "T100",  # flake8-debugger
+  "TRY",   # tryceratops
+  "UP",    # pyupgrade
+  "W",     # pycodestyle
+  "YTT",   # flake8-2020
 ]
 ignore = [
-  "A005",   # allow to shadow stdlib and builtin module names
-  "COM812", # trailing comma, conflicts with `ruff format`
+  "A005",    # allow to shadow stdlib and builtin module names
+  "COM812",  # trailing comma, conflicts with `ruff format`
   # Different doc rules that we don't really care about:
   "D100",
   "D104",
@@ -117,7 +111,7 @@ ignore = [
   "D401",
   "D404",
   "D405",
-  "D418",  # We should be able to add docstrings to `@overload` decorators
+  "D418",    # We should be able to add docstrings to `@overload` decorators
   "ISC001",  # implicit string concat conflicts with `ruff format`
   "ISC003",  # prefer explicit string concat over implicit concat
   "PLR09",   # we have our own complexity rules
@@ -129,29 +123,75 @@ ignore = [
   "TRY003",  # long exception messages from `tryceratops`
 ]
 external = [ "WPS" ]
-
 # Plugin configs:
 flake8-quotes.inline-quotes = "single"
 mccabe.max-complexity = 6
 pydocstyle.convention = "google"
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*.py" = ["S101"]
+"tests/*.py" = [ "S101" ]
+
+
+[tool.codespell]
+# codespell configuration: https://github.com/codespell-project/codespell
+skip = [
+  "*.lock",
+  ".mypy_cache",
+  "__pycache__",
+  "_build",
+]
+
+
+[tool.pyproject-fmt]
+# Docs: https://pyproject-fmt.readthedocs.io/en/latest/configuration.html
+column_width = 80
+generate_python_version_classifiers = false
+table_format = "long"
+sub_table_spacing = "\n"
+separate_root_table = "\n\n"
+
+
+[tool.typos.files]
+# typos configuration: https://github.com/crate-ci/typos/
+extend-exclude = [
+  "__pycache__",
+  "_build",
+  ".mypy_cache",
+  "*.lock",
+]
+
+
+[tool.mypy]
+warn_unreachable = true
+enable_error_code = [
+  "deprecated",
+  "explicit-override",
+  "ignore-without-code",
+  "mutable-override",
+  "possibly-undefined",
+  "redundant-expr",
+  "redundant-self",
+  "truthy-bool",
+  "truthy-iterable",
+  "unimported-reveal",
+  "unused-awaitable",
+]
+strict_equality_for_none = true
+# The mypy configurations: http://bit.ly/2zEl9WI
+strict = true
 
 
 [tool.pytest.ini_options]
 # pytest config: http://doc.pytest.org/en/latest/customize.html
-
 # Strict `@xfail` by default:
 xfail_strict = true
 # Fail on warnings:
-filterwarnings = ["error"]
-
+filterwarnings = [ "error" ]
 addopts = [
   "--strict-config",
   "--strict-markers",
   "--doctest-modules",
-    # Output:
+  # Output:
   "--tb=short",
   # Coverage:
   "--cov={{ cookiecutter.project_name.lower().replace('-', '_') }}",
@@ -166,42 +206,6 @@ addopts = [
 ]
 
 
-[tool.mypy]
-# The mypy configurations: http://bit.ly/2zEl9WI
-strict = true
-strict_equality_for_none = true
-warn_unreachable = true
-
-enable_error_code = [
-  "truthy-bool",
-  "truthy-iterable",
-  "redundant-expr",
-  "unused-awaitable",
-  "ignore-without-code",
-  "possibly-undefined",
-  "redundant-self",
-  "explicit-override",
-  "mutable-override",
-  "unimported-reveal",
-  "deprecated",
-]
-
-
-[tool.codespell]
-# codespell configuration: https://github.com/codespell-project/codespell
-skip = [
-  "__pycache__",
-  "_build",
-  ".mypy_cache",
-  "*.lock",
-]
-
-
-[tool.typos.files]
-# typos configuration: https://github.com/crate-ci/typos/
-extend-exclude = [
-  "__pycache__",
-  "_build",
-  ".mypy_cache",
-  "*.lock",
-]
+[tool.coverage.run]
+# Covdefaults: https://pypi.org/project/covdefaults
+plugins = [ "covdefaults" ]

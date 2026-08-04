@@ -34,6 +34,11 @@ repos:
         args: ["--exit-non-zero-on-fix"]
       - id: ruff-format
 
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: "d600c142bb19f521ae6a6a345f94a2efd7937759"  # frozen: v2.26.0
+    hooks:
+      - id: pyproject-fmt
+
   - repo: https://github.com/EbodShojaei/bake
     rev: a39df91c8e2c8ee584f81ff8d7d00f137a5fc160  # frozen: v1.4.6
     hooks:

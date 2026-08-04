@@ -1,22 +1,21 @@
 [build-system]
-requires = ["poetry-core>=2.0"]
 build-backend = "poetry.core.masonry.api"
+requires = [ "poetry-core>=2" ]
 
 
 [tool.poetry]
 name = "wemake-python-package"
-description = "Bleeding edge cookiecutter template to create new python packages"
 version = "0.1.0"
-readme = "README.md"
+description = "Bleeding edge cookiecutter template to create new python packages"
+package-mode = false
+license = "MIT"
 authors = [
   "Nikita Sobolev <mail@sobolevn.me>",
 ]
-license = "MIT"
-package-mode = false
+readme = "README.md"
 classifiers = [
   "Private :: Do not Upload",
 ]
-
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -26,28 +25,25 @@ lice2 = "^0.13"
 
 [tool.poetry.group.dev.dependencies]
 binaryornot = "^0.6"
-
-wemake-python-styleguide = "^1.7"
-ruff = "^0.16"
-
 mypy = "^2.3"
-
 pytest = "^9.1"
-pytest-randomly = "^4.1"
 pytest-cookies = "^0.7"
+pytest-randomly = "^4.1"
+ruff = "^0.16"
+wemake-python-styleguide = "^1.7"
 
 
 [tool.ruff]
-# Ruff config: https://docs.astral.sh/ruff/settings
-preview = true
-fix = true
-output-prefer-rule-codes = true
 target-version = "py311"
 line-length = 80
 extend-exclude = [
   # Internal project:
-  '[{][{]cookiecutter.project_name[}][}]',
+  "[{][{]cookiecutter.project_name[}][}]",
 ]
+# Ruff config: https://docs.astral.sh/ruff/settings
+preview = true
+fix = true
+output-prefer-rule-codes = true
 
 [tool.ruff.format]
 quote-style = "single"
@@ -95,8 +91,8 @@ select = [
   "YTT",  # flake8-2020
 ]
 ignore = [
-  "A005",   # allow to shadow stdlib and builtin module names
-  "COM812", # trailing comma, conflicts with `ruff format`
+  "A005",    # allow to shadow stdlib and builtin module names
+  "COM812",  # trailing comma, conflicts with `ruff format`
   # Different doc rules that we don't really care about:
   "D100",
   "D104",
@@ -117,7 +113,6 @@ ignore = [
   "TRY003",  # long exception messages from `tryceratops`
 ]
 external = [ "WPS" ]
-
 # Plugin configs:
 flake8-quotes.inline-quotes = "single"
 mccabe.max-complexity = 6
@@ -129,36 +124,42 @@ pydocstyle.convention = "google"
 ]
 
 
-[tool.pytest.ini_options]
-# pytest config: http://doc.pytest.org/en/latest/customize.html
+[tool.codespell]
+# codespell configuration: https://github.com/codespell-project/codespell
+skip = [
+  "*.lock",
+  ".mypy_cache",
+  "__pycache__",
+  "_build",
+]
 
-# Strict `@xfail` by default:
-xfail_strict = true
-# Fail on warnings:
-filterwarnings = ["error"]
 
-addopts = [
-  "--strict-config",
-  "--strict-markers",
-  "--doctest-modules",
-  "--tb=short",
-  # Custom template parts:
-  "--ignore={{cookiecutter.project_name}}",
-  "--ignore=hooks",
+[tool.pyproject-fmt]
+# Docs: https://pyproject-fmt.readthedocs.io/en/latest/configuration.html
+column_width = 80
+generate_python_version_classifiers = false
+table_format = "long"
+sub_table_spacing = "\n"
+separate_root_table = "\n\n"
+
+
+[tool.typos.files]
+# typos configuration: https://github.com/crate-ci/typos/
+extend-exclude = [
+  "__pycache__",
+  "_build",
+  ".mypy_cache",
+  "*.lock",
 ]
 
 
 [tool.mypy]
+exclude = [
+  "{{cookiecutter.project_name}}",
+]
 # The mypy configurations: http://bit.ly/2zEl9WI
 ignore_missing_imports = true
-strict = true
-strict_equality_for_none = true
 warn_unreachable = true
-
-exclude = [
-  '{{cookiecutter.project_name}}',
-]
-
 enable_error_code = [
   "deprecated",
   "exhaustive-match",
@@ -172,23 +173,22 @@ enable_error_code = [
   "unimported-reveal",
   "unused-awaitable",
 ]
+strict_equality_for_none = true
+strict = true
 
 
-[tool.codespell]
-# codespell configuration: https://github.com/codespell-project/codespell
-skip = [
-  "__pycache__",
-  "_build",
-  ".mypy_cache",
-  "*.lock",
-]
-
-
-[tool.typos.files]
-# typos configuration: https://github.com/crate-ci/typos/
-extend-exclude = [
-  "__pycache__",
-  "_build",
-  ".mypy_cache",
-  "*.lock",
+[tool.pytest.ini_options]
+# pytest config: http://doc.pytest.org/en/latest/customize.html
+# Strict `@xfail` by default:
+xfail_strict = true
+# Fail on warnings:
+filterwarnings = [ "error" ]
+addopts = [
+  "--strict-config",
+  "--strict-markers",
+  "--doctest-modules",
+  "--tb=short",
+  # Custom template parts:
+  "--ignore={{cookiecutter.project_name}}",
+  "--ignore=hooks",
 ]
