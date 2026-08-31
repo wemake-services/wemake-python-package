@@ -6,7 +6,9 @@ requires = [ "poetry-core>=2" ]
 [tool.poetry]
 name = "wemake-python-package"
 version = "0.1.0"
-description = "Bleeding edge cookiecutter template to create new python packages"
+description = """\
+  Bleeding edge cookiecutter template to create new python packages\
+  """
 package-mode = false
 license = "MIT"
 authors = [
@@ -48,6 +50,11 @@ output-prefer-rule-codes = true
 [tool.ruff.format]
 quote-style = "single"
 docstring-code-format = true
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = [
+  "S101", # asserts
+]
 
 [tool.ruff.lint]
 select = [
@@ -118,11 +125,6 @@ flake8-quotes.inline-quotes = "single"
 mccabe.max-complexity = 6
 pydocstyle.convention = "google"
 
-[tool.ruff.lint.per-file-ignores]
-"tests/*.py" = [
-  "S101", # asserts
-]
-
 
 [tool.codespell]
 # codespell configuration: https://github.com/codespell-project/codespell
@@ -178,11 +180,6 @@ strict = true
 
 
 [tool.pytest.ini_options]
-# pytest config: http://doc.pytest.org/en/latest/customize.html
-# Strict `@xfail` by default:
-xfail_strict = true
-# Fail on warnings:
-filterwarnings = [ "error" ]
 addopts = [
   "--strict-config",
   "--strict-markers",
@@ -192,3 +189,8 @@ addopts = [
   "--ignore={{cookiecutter.project_name}}",
   "--ignore=hooks",
 ]
+# pytest config: http://doc.pytest.org/en/latest/customize.html
+# Strict `@xfail` by default:
+xfail_strict = true
+# Fail on warnings:
+filterwarnings = [ "error" ]
