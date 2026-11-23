@@ -23,7 +23,7 @@ classifiers = [
 python = "^3.11"
 cookiecutter = "^2.7"
 jinja2-git = "^1.4"
-lice2 = "^0.13"
+lice3 = "^0.14"
 
 [tool.poetry.group.dev.dependencies]
 binaryornot = "^0.6"
