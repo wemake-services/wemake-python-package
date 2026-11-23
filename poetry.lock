@@ -516,20 +516,19 @@ files = [
 
 [[package]]
 name = "lice3"
-version = "0.14.0"
+version = "0.14.1"
 description = "Generate license files for your projects"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "lice3-0.14.0-py3-none-any.whl", hash = "sha256:dac2c20a8049a83d19ec0d0ee14f0eb85516a43692143f46fbda6b44b74e2d05"},
-    {file = "lice3-0.14.0.tar.gz", hash = "sha256:21998d0d321cd15e29060e2b21afac6aa29209e272ca68be172249e015e14d85"},
+    {file = "lice3-0.14.1-py3-none-any.whl", hash = "sha256:c3185ec8ad9609d324c7ad81f8512920036625cd0a18b36ee8ed0fc17eaaae18"},
+    {file = "lice3-0.14.1.tar.gz", hash = "sha256:1d83dc4dc012466d51c8da5fc7a5d966d298c9266ab9863cca74459628b59f86"},
 ]
 
 [package.dependencies]
 pyperclip = ">=1.9.0"
 rich = ">=13.8.0"
-simple-toml-settings = ">=0.8.0"
 single-source = ">=0.4.0"
 typer = ">=0.12.5"
 
@@ -1078,81 +1077,6 @@ pygments = ">=2.13.0,<3.0.0"
 jupyter = ["ipywidgets (>=7.5.1,<9)"]
 
 [[package]]
-name = "rtoml"
-version = "0.13.0"
-description = "A TOML library for python implemented in rust."
-optional = false
-python-versions = ">=3.10"
-groups = ["main"]
-files = [
-    {file = "rtoml-0.13.0-cp310-cp310-macosx_10_12_x86_64.whl", hash = "sha256:eafa7371184cf88fd962986f019150e07f473387aabfe2bd5fb8fbb5d1a07802"},
-    {file = "rtoml-0.13.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:85428686fb8b8f7958ec748ffa30f3de58dc6816df46178cbd8911b3cf39123a"},
-    {file = "rtoml-0.13.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ae8beee0988a650804b4fb9ec60b62ed8060ee57e643dad914fb797c6ef4e77f"},
-    {file = "rtoml-0.13.0-cp310-cp310-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:49be00b28d35da2b60067e0340d163fdb7bf30fc38bc904d7395e655b00f8400"},
-    {file = "rtoml-0.13.0-cp310-cp310-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:d780e33792d37b8195f7f559c720281b09ce3d3db3a37e464033ba193c2d07c9"},
-    {file = "rtoml-0.13.0-cp310-cp310-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:f0333ce68b4aeb18cccfaafcded3461a2c6c1ccca0d925e79df154061d914323"},
-    {file = "rtoml-0.13.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:479b76b02e66985621b06856e090917e41114922a20dce12fc2fe8555c2305be"},
-    {file = "rtoml-0.13.0-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:a5b2543992cc16c33dd055dcd098b2cd8f6c13a444e635f6ca4f96a104431235"},
-    {file = "rtoml-0.13.0-cp310-cp310-musllinux_1_1_aarch64.whl", hash = "sha256:642ad0162120268a62007774a41ad62521cc657c75c6c6876faeb8bd0000fe38"},
-    {file = "rtoml-0.13.0-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:3bb30794ae9302f94cfba9b623332b4fa4a9a94f63a8bad84a3ef1b117ae4d7b"},
-    {file = "rtoml-0.13.0-cp310-cp310-win32.whl", hash = "sha256:c328fb7d90420c9c75073012f9b44395ab595b139930034ddad2a561c536f9ad"},
-    {file = "rtoml-0.13.0-cp310-cp310-win_amd64.whl", hash = "sha256:5f315170541dafcfc49cfde173e554b3be11a45f4052933fd9aff676946be72d"},
-    {file = "rtoml-0.13.0-cp311-cp311-macosx_10_12_x86_64.whl", hash = "sha256:59f53f569118409dca6089816f35b76b00548777e103ca8536eebb4fc899213c"},
-    {file = "rtoml-0.13.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:1292bbf888f75ded2599ec774fd404a9bd1b91ad5e08702c93c8b1ea8d297a94"},
-    {file = "rtoml-0.13.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0d94c29362722ef39b7455d54b1d845f3137c4c593d5619f3beac3c17dc54d8a"},
-    {file = "rtoml-0.13.0-cp311-cp311-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:eae970f8613a4de80ce8f250e0c58a17b889fbf4a2de200820adb6de6add7e5f"},
-    {file = "rtoml-0.13.0-cp311-cp311-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:4a5c0dfed4734f6738eee8f6459366ccb15d67bf0c1384e2675ae8285425f9fa"},
-    {file = "rtoml-0.13.0-cp311-cp311-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:4cb9d95d72a9cba3abd3972cabafef32bf71a50bc4c04386f9ed1a8ee964761a"},
-    {file = "rtoml-0.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ac04606ae7ffa744d07f0311bb45b3ffcef88c3fa7bb412c26be2c38209c2dbc"},
-    {file = "rtoml-0.13.0-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:d2f248c5e9a3a909a4ab3da79586da9753e4f4b3e5d5d085179dfb774a001399"},
-    {file = "rtoml-0.13.0-cp311-cp311-musllinux_1_1_aarch64.whl", hash = "sha256:813b26bf63abe4e901cc1a32d13ee8d2a7d69fcfa44ddd16c02d6a3cd35276f5"},
-    {file = "rtoml-0.13.0-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:cfe6ed73740ba93f15c070fd8236efeb4d57d0bcc8852c73f25c5b9dd1b8e6ba"},
-    {file = "rtoml-0.13.0-cp311-cp311-win32.whl", hash = "sha256:8e80308bcce3c10ec3928385fb1dcfeb3e8e4978d492b92d016fb88a65930b8d"},
-    {file = "rtoml-0.13.0-cp311-cp311-win_amd64.whl", hash = "sha256:633a23a91b0ce5d4995a72342110ebbaa2b5963b78d4a27a2883406beb19709f"},
-    {file = "rtoml-0.13.0-cp311-cp311-win_arm64.whl", hash = "sha256:5c874416441b7a7a3b3c321979fb778bd1482b550d1903d6821a4ddcfb5691bb"},
-    {file = "rtoml-0.13.0-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:e94c60ee00b6625c1e0f42d411edc8aa1c4fcf09c183347eb362a7b87e36f199"},
-    {file = "rtoml-0.13.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:1e15f554e62b3b1661bd2ee5972f0a2d3dca925753481c6022b3f31d05634bb4"},
-    {file = "rtoml-0.13.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f8a2d9c8234d245334765a89f65b0d934f403629423f70f30a688fc8194e8ed1"},
-    {file = "rtoml-0.13.0-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:7fb0c9f266136a2072d082bc781e49c27422e740505788573ad9cdc58015f58e"},
-    {file = "rtoml-0.13.0-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:2fe4a2443246b56e1fb25f298acb7f3d93da0623d52ef76dbfb2abeb0cfbdfaf"},
-    {file = "rtoml-0.13.0-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:f4a8896475cfb4ef68fd2dda2ad3aacecb6d9c40696e85f47ad8b18b8f003b42"},
-    {file = "rtoml-0.13.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:5a0939d03ce3dc5340645e0cb191e82d248dff5a77d6646139c5f9ac8531799d"},
-    {file = "rtoml-0.13.0-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:763f8b86db927e1bb6e6d65c676a03c6431f1de1037ae896c3a0984353573547"},
-    {file = "rtoml-0.13.0-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:ff2f38ffbd3c8bfdc60513ef8efdc732fa205bd53a45226559df5605cb1431d5"},
-    {file = "rtoml-0.13.0-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:ba2fbc1f1fa7bff8d722fd2539dc9962064b6193b90424625b2d4fe87726f945"},
-    {file = "rtoml-0.13.0-cp312-cp312-win32.whl", hash = "sha256:ed5120b56e568df8f297e7a8228b2f2c258daaee3af8b690584cbc0dce1d7f05"},
-    {file = "rtoml-0.13.0-cp312-cp312-win_amd64.whl", hash = "sha256:1af5785c1f0119d523c77461de8c910e87f6254d3786f9768a8e16ec8250d42d"},
-    {file = "rtoml-0.13.0-cp312-cp312-win_arm64.whl", hash = "sha256:564903f2ea90191ac172f89a47a3d6b7d633ff7e2ac92b82590924ad6e1452ba"},
-    {file = "rtoml-0.13.0-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:ad9988a3a4bd11e45d8cc2064c16397dfe6686cef18f2cfdeb7e93bdb2ca9775"},
-    {file = "rtoml-0.13.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:44ef5f5deb6eb735b93074dd56e7039c3c4929055e91feb83e2032e4c2bd1665"},
-    {file = "rtoml-0.13.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:020fe78f7e53b9fef1762cd3734374baa506b225dd72ee7603242b11f33602c3"},
-    {file = "rtoml-0.13.0-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:1f4ceacdeab625f9585006976961f65165318d494f13f2cd114880576996f8ab"},
-    {file = "rtoml-0.13.0-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:2823c41a3d0d019f3a0724e3a7c95439d6e034acc5251ed5c8129a5c8edcfb0a"},
-    {file = "rtoml-0.13.0-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:e289dc70d1ad0a81266b0f85ffbbc2a0e3ab58c1aedbd2bd5f46cfd8d3da5afe"},
-    {file = "rtoml-0.13.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0e904779134a2d9658edbdc58392a84f7a531620afdd2ded67a6bb792b2cfb86"},
-    {file = "rtoml-0.13.0-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:956fcce8ec80ea59e32f85e8897cfaabd63a2a945aad1d9e439274ee71b9a6f6"},
-    {file = "rtoml-0.13.0-cp313-cp313-musllinux_1_1_aarch64.whl", hash = "sha256:b756dc66682b89f3fa2dea3dc17d2acf7ca2af416ba7a36f19e97340f2b3ffa4"},
-    {file = "rtoml-0.13.0-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:9fb0792ce87a49bb7ba8e9332854ca0b178c6f86462ae1142813b2b780875633"},
-    {file = "rtoml-0.13.0-cp313-cp313-win32.whl", hash = "sha256:ad2e3e3accec89d112a431fa0991c9dd2f1ca5282e385a75f6697b5de6910ef9"},
-    {file = "rtoml-0.13.0-cp313-cp313-win_amd64.whl", hash = "sha256:d7435f2b11384216461e2355a2795e67dc812d701f66890bd43680b6a8e365ce"},
-    {file = "rtoml-0.13.0-cp313-cp313-win_arm64.whl", hash = "sha256:0434e3d196375b82cfa5dc155cad6c78fd96c2cc6692e1d887505e1d99900986"},
-    {file = "rtoml-0.13.0-cp314-cp314-macosx_10_12_x86_64.whl", hash = "sha256:566f8f8e6dc2e965972b0d8f7c856e4920c443815e9d29a895ae04d588d9b48f"},
-    {file = "rtoml-0.13.0-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:e5634d2079c8912958791973e0a4cfed311660286bfb6b14698294735ede7b7d"},
-    {file = "rtoml-0.13.0-cp314-cp314-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:18a141e0ea5ec8e0be88726d768956affe4a937b109421567cbd4dfdc5016d0c"},
-    {file = "rtoml-0.13.0-cp314-cp314-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:55b003f31a87f49dd941d02aac84b7c4d8cfbd1dfcc80d7a6a71835c72ddd74f"},
-    {file = "rtoml-0.13.0-cp314-cp314-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:9c7ade406218833fbbc97ceca92050c02f4d724045770eb9020be1b3d97df455"},
-    {file = "rtoml-0.13.0-cp314-cp314-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:c84d8b77cd0dbb5cf1da33846d5c5fd02536c06ab5ab560e90e4ca2920942b58"},
-    {file = "rtoml-0.13.0-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:95a229595254449cbf0b2e396f1b444ed8a0c259f78bab505326bb2a1e4239ff"},
-    {file = "rtoml-0.13.0-cp314-cp314-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:a3bf2a94df8bb22642fbd263b17aa6b7822384a756204c1da9ae05c4c5c749f9"},
-    {file = "rtoml-0.13.0-cp314-cp314-musllinux_1_1_aarch64.whl", hash = "sha256:8377affbcf36c4fc8360778015c82972b4d0134faacee426ec37e8e7afcf3855"},
-    {file = "rtoml-0.13.0-cp314-cp314-musllinux_1_1_x86_64.whl", hash = "sha256:b844b95939cc4f7b88d99fc874a191957d218ecf057bdc381745ad58e953361b"},
-    {file = "rtoml-0.13.0-cp314-cp314-win32.whl", hash = "sha256:cadb00e9a4d09832d2842ae18638d27103c992ccfbc5a702eb14b6b40e4e0ed9"},
-    {file = "rtoml-0.13.0-cp314-cp314-win_amd64.whl", hash = "sha256:4f1c6fa1c31f2baabc1436e8b87997da2b960e61a5a4dac52f7f4e4ef7b6810c"},
-    {file = "rtoml-0.13.0-cp314-cp314-win_arm64.whl", hash = "sha256:f513e54f6788038bb6473564544b27cecd48dc2666fc066eb09f3759df4e3b42"},
-    {file = "rtoml-0.13.0.tar.gz", hash = "sha256:974522c887b47abc0bb62ee8ae9e44d3a0c2cdac9d60ba0ed01c5a40df0ea424"},
-]
-
-[[package]]
 name = "ruff"
 version = "0.17.5"
 description = "An extremely fast Python linter and code formatter, written in Rust."
@@ -1191,21 +1115,6 @@ files = [
     {file = "shellingham-1.5.4-py2.py3-none-any.whl", hash = "sha256:7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686"},
     {file = "shellingham-1.5.4.tar.gz", hash = "sha256:8dbca0739d487e5bd35ab3ca4b36e11c4078f3a234bfce294b0a0291363404de"},
 ]
-
-[[package]]
-name = "simple-toml-settings"
-version = "0.13.0"
-description = "A Python library to save your settings in a TOML file."
-optional = false
-python-versions = ">=3.10"
-groups = ["main"]
-files = [
-    {file = "simple_toml_settings-0.13.0-py3-none-any.whl", hash = "sha256:dfaab5135b5f2f4262bce5308f6edc9d9ddf792a3d6c6a96c38157a660d33755"},
-    {file = "simple_toml_settings-0.13.0.tar.gz", hash = "sha256:1eb266dda5496573c8688567907b32a6d449b720b1035b32fa2d91ce507e94d4"},
-]
-
-[package.dependencies]
-rtoml = ">=0.12.0"
 
 [[package]]
 name = "single-source"
@@ -1326,4 +1235,4 @@ mcp = ["mcp[cli] (>=2.0,<3.0)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.11"
-content-hash = "3b3556052b981bb00219794ccb1e53ce8314b28a974d926410c37f59747269fb"
+content-hash = "c0218ee94e8c41991539e30f5ab08193c9aafec9305233eb87fe427379f10148"
