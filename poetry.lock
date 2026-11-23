@@ -1235,4 +1235,4 @@ mcp = ["mcp[cli] (>=2.0,<3.0)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.11"
-content-hash = "c0218ee94e8c41991539e30f5ab08193c9aafec9305233eb87fe427379f10148"
+content-hash = "3b3556052b981bb00219794ccb1e53ce8314b28a974d926410c37f59747269fb"
