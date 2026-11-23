@@ -32,7 +32,7 @@ Just like `poetry new` but better.
 Firstly, you will need to install dependencies:
 
 ```bash
-pip install cookiecutter jinja2-git lice2
+pip install cookiecutter jinja2-git lice3
 ```
 
 Then, create a project itself:
