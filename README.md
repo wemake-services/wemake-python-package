@@ -44,7 +44,7 @@ cookiecutter gh:wemake-services/wemake-python-package
 Or with [`uvx`](https://docs.astral.sh/uv/guides/tools) with just a single command:
 
 ```bash
-uvx --with jinja2-git --with lice2 cookiecutter gh:wemake-services/wemake-python-package
+uvx --with jinja2-git --with lice3 cookiecutter gh:wemake-services/wemake-python-package
 ```
 
 In order for the github actions to work smoothly (ie badge), you must, during the setup, use your github username in the `organization` field.
