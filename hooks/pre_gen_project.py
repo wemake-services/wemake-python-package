@@ -35,7 +35,7 @@ def _validate_deps() -> None:
         import lice3  # noqa: F401, PLC0415
     except ImportError:
         raise RuntimeError(
-            'lice is not installed, please install it before proceeding',
+            'lice3 is not installed, please install it before proceeding',
         ) from None
 
     try:
